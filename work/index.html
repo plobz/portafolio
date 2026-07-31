@@ -706,8 +706,10 @@ body {
                 vid.loop = true;
                 vid.playsInline = true;
                 vid.autoplay = true;
+                vid.preload = 'auto';
                 vid.className = 'card-video';
                 card.appendChild(vid);
+                vid.play().catch(() => {});
             } else if (p.video) {
                 const vid = document.createElement('video');
                 vid.src = p.img;
@@ -715,8 +717,10 @@ body {
                 vid.loop = true;
                 vid.playsInline = true;
                 vid.autoplay = true;
+                vid.preload = 'auto';
                 vid.className = 'card-video';
                 card.appendChild(vid);
+                vid.play().catch(() => {});
             } else {
                 const img = document.createElement('img');
                 img.src = p.img;
