@@ -3,14 +3,26 @@
     'use strict';
     
     // Lenis smooth scroll (disabled wheel so we can handle horizontal snap)
-    const lenis = new Lenis({
-        duration: 0.5,
-        easing: (t) => 1 - Math.pow(1 - t, 3),
-        orientation: 'vertical',
-        smoothWheel: false,
-        wheelMultiplier: 1,
-        touchMultiplier: 1.2
-    });
+    let lenis;
+    try {
+        lenis = new Lenis({
+            duration: 0.5,
+            easing: (t) => 1 - Math.pow(1 - t, 3),
+            orientation: 'vertical',
+            smoothWheel: false,
+            wheelMultiplier: 1,
+            touchMultiplier: 1.2
+        });
+    } catch (err) {
+        lenis = {
+            raf() {},
+            get scroll() { return window.pageYOffset || 0; },
+            scrollTo(target, opts) {
+                const top = typeof target === 'number' ? target : 0;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+        };
+    }
     
     function raf(time) {
         lenis.raf(time);
