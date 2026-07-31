@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — PABZ | Branding, Packaging &amp; Design Portfolio by Pablo Ibañez</title>
+    <meta name="description" content="Explore branding, packaging and design projects by PABZ — visual identity, art direction and freestyle work by Pablo Ibañez, Senior Brand Designer and Art Director.">
+    <meta name="keywords" content="PABZ, Pablo Ibañez, branding, packaging design, graphic design portfolio, brand identity, art direction, client work, freestyle design">
+    <meta name="author" content="Pablo Ibáñez">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://p4bz.com/Work/">
+    <meta property="og:title" content="Projects — PABZ | Branding, Packaging &amp; Design Portfolio">
+    <meta property="og:description" content="Branding, packaging and design projects by Pablo Ibañez, Senior Brand Designer and Art Director.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://p4bz.com/Work/">
+    <meta property="og:image" content="https://p4bz.com/assets/PABZ_LETTERING_1.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="PABZ">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects — PABZ | Branding, Packaging &amp; Design Portfolio">
+    <meta name="twitter:description" content="Branding, packaging and design projects by Pablo Ibañez, Senior Brand Designer.">
+    <meta name="twitter:image" content="https://p4bz.com/assets/PABZ_LETTERING_1.svg">
+    <link rel="icon" type="image/png" href="../emoji.png">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('../assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @view-transition { navigation: auto; }
+        ::view-transition-old(root),
+        ::view-transition-new(root) { animation-duration: 0s; }
+        ::view-transition-old(top-nav),
+        ::view-transition-new(top-nav) { animation-duration: 0s; }
+body {
+    font-family: 'Inter', sans-serif;
+    background: #e5e5e5;
+    color: #000;
+    min-height: 100vh;
+}
+        body.dark-theme {
+            background: #000;
+            color: #ffffff;
+        }
+
+        /* Navigation buttons — exact same as home */
+        .nav-button {
+            position: fixed;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            color: #ffffff;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 5000;
+            text-transform: none;
+            letter-spacing: 2px;
+            padding: 8px 12px 4px;
+            user-select: none;
+            line-height: 1;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-repeat: no-repeat;
+            background-position: 12px bottom;
+            background-origin: padding-box;
+            background-clip: padding-box;
+            background-size: 0px 1px;
+            transition: background-size 0.3s ease;
+            mix-blend-mode: difference;
+        }
+        .nav-button:hover { background-size: calc(100% - 24px) 1px; }
+
+        .social-btn {
+            background: transparent; border: none; font-family: 'Satoshi', sans-serif;
+            font-weight: 500; font-size: 16px; color: inherit; cursor: pointer;
+            padding: 8px 12px 4px 3px; margin: 0; letter-spacing: 1px;
+            display: inline-block; line-height: 1;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-repeat: no-repeat;
+            background-position: 3px bottom;
+            background-origin: padding-box;
+            background-clip: padding-box;
+            background-size: 0px 1px;
+            transition: background-size 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
+        }
+        .social-btn:hover { background-size: calc(100% - 15px) 1px; }
+        .hola-mobile { display: none; }
+        @media (min-width: 769px) {
+            .mobile-lets-talk { display: none !important; }
+        }
+ 
+        .bottom-left-text {
+            bottom: 20px;
+            left: 20px;
+            pointer-events: none;
+            max-width: 250px;
+            line-height: 1.2;
+            text-align: left;
+            padding-left: 3px;
+        }
+        .filter-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            gap: 12px;
+            z-index: 5000;
+            pointer-events: auto;
+        }
+        .filter-btn {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: inherit;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 4px 0;
+            letter-spacing: 1px;
+            line-height: 1;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-repeat: no-repeat;
+            background-position: 0 bottom;
+            background-origin: padding-box;
+            background-clip: padding-box;
+            background-size: 0px 1px;
+            transition: background-size 0.3s ease, opacity 0.3s ease;
+            opacity: 0.3;
+        }
+        .filter-btn:hover { background-size: 100% 1px; }
+        .filter-btn.active { opacity: 1; background-size: 100% 1px; }
+
+        .bottom-right-container {
+            bottom: 20px;
+            right: 20px;
+            pointer-events: none;
+            text-align: right;
+            padding-left: 3px;
+        }
+
+        .bottom-middle-scroll {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            z-index: 5000;
+            pointer-events: none;
+        }
+        .bottom-middle-scroll span {
+            font-size: 16px;
+            letter-spacing: 0.08em;
+            text-transform: none;
+        }
+        .scroll-track-horizontal {
+            width: 56px;
+            height: 1px;
+            position: relative;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .scroll-track-horizontal::after {
+            content: '';
+            position: absolute;
+            left: -100%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            animation: trackScrollHorizontal 2.2s ease-in-out infinite;
+        }
+        @keyframes trackScrollHorizontal {
+            0%   { left: -100%; opacity: 1; }
+            80%  { left: 100%; opacity: 1; }
+            100% { left: 100%; opacity: 0; }
+        }
+        body.dark-theme .scroll-track-horizontal { background: rgba(255, 255, 255, 0.2); }
+        body.dark-theme .scroll-track-horizontal::after { background: #ffffff; }
+
+        .top-nav-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 5000;
+            pointer-events: none;
+            view-transition-name: top-nav;
+        }
+        .top-nav-container .nav-button:last-child {
+            margin-left: auto;
+        }
+        .top-nav-container .nav-button {
+            position: relative;
+            top: auto;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            pointer-events: auto;
+        }
+
+
+        .hola-button {
+            text-align: right;
+            display: inline-block;
+            background-position: right 3px bottom;
+            padding-right: 3px;
+        }
+        .hola-button:hover { background-size: calc(100% - 15px) 1px; }
+        .hola-button.active-socials { padding: 0; background-size: 0px 1px !important; }
+        .hola-socials { display: none; }
+        .hola-button.active-socials .hola-text { display: none; }
+        .hola-button.active-socials .hola-socials { display: inline; }
+
+        .redes-button {
+            width: auto;
+            text-align: left;
+            display: inline-block;
+            padding-left: 3px;
+            background-position: 3px bottom;
+        }
+        .redes-button:hover { background-size: calc(100% - 15px) 1px; }
+
+        .work-button {
+            width: auto;
+            display: inline-block;
+        }
+
+
+        body.dark-theme .nav-button { color: #ffffff; }
+        body:not(.dark-theme) .nav-button { color: #000; }
+        .bottom-left-text, .bottom-right-container, .bottom-middle-scroll {
+            mix-blend-mode: unset;
+        }
+
+        .ver-todo-button {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            z-index: 5000;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 10px 15px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            line-height: 1;
+            transition: transform 0.3s ease, opacity 0.4s ease;
+            pointer-events: none;
+            user-select: none;
+            opacity: 0;
+        }
+        .ver-todo-button.visible { opacity: 1; pointer-events: auto; }
+        .ver-todo-button:hover { transform: translateY(-50%); }
+        body.dark-theme .ver-todo-button { color: #ffffff; }
+        body:not(.dark-theme) .ver-todo-button { color: #000000; }
+        .desktop-text { display: inline; }
+        .mobile-text { display: none; }
+
+        /* Editorial horizontal scroll */
+        .scroll-wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .scroll-wrap::-webkit-scrollbar { display: none; }
+
+        .track {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-rows: 1fr 1fr;
+            gap: 24px;
+            padding: 60px 40px 80px 23px;
+            height: 100vh;
+            width: max-content;
+            box-sizing: border-box;
+        }
+        .card {
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition: opacity 0.25s ease, transform 0.3s ease;
+        }
+        .card:hover {
+            filter: brightness(1);
+        }
+        .card img,
+        .card-video {
+            display: block;
+            width: 100%;
+            flex: 1;
+            min-height: 0;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 400ms ease;
+        }
+        .card:hover img {
+            transform: none;
+        }
+        .coming-soon-sphere {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+        .coming-soon-sphere span {
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            line-height: 1.1;
+            color: inherit;
+            text-align: center;
+            padding: 8px;
+        }
+        .card-overlay {
+            position: relative;
+            inset: auto;
+            background: none;
+            opacity: 1;
+            padding: 8px 0 0;
+            display: block;
+            pointer-events: none;
+        }
+        .card-overlay-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 8px 12px;
+            pointer-events: none;
+        }
+        .card-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: none;
+            color: #000;
+            text-align: left;
+            line-height: 1.2;
+        }
+        body.dark-theme .card-title { color: #ffffff; }
+
+        /* Slot sizes — per-class instead of nth-child */
+        .card-wide { grid-row: span 2; width: clamp(420px, 42vw, 720px); }
+        .card-half-top,
+        .card-half-bottom,
+        .card-stretch { width: clamp(280px, 24vw, 440px); }
+
+        body { overflow: hidden; }
+
+        @media (max-width: 768px) {
+            .top-nav-container {
+                display: flex;
+                justify-content: space-between;
+                top: 20px;
+                left: 20px;
+                right: 20px;
+            }
+            .bottom-left-text { display: none !important; }
+            #limaTimeContainer,
+            .bottom-middle-scroll { display: none !important; }
+            .desktop-text { display: none !important; }
+            .mobile-text { display: inline !important; }
+            #redesButton {
+                order: 1;
+                position: relative;
+                top: auto;
+                left: auto;
+                display: block;
+                font-size: 16px;
+                padding: 8px 3px;
+                margin-right: 8px;
+            }
+            #workButton {
+                display: none !important;
+            }
+            #holaButton {
+                order: 5;
+                display: block;
+                position: relative;
+                top: auto;
+                font-size: 16px;
+                padding: 8px 3px;
+            }
+            #holaButton.active-socials {
+                padding: 8px 3px;
+            }
+            #holaButton .hola-socials {
+                display: inline;
+                position: absolute;
+                top: 0;
+                right: 0;
+                white-space: nowrap;
+                visibility: hidden;
+            }
+            #holaButton.active-socials .hola-socials {
+                visibility: visible;
+            }
+            #holaButton.active-socials .hola-text {
+                display: inline;
+                visibility: hidden;
+            }
+            #lightButton {
+                position: fixed !important;
+                right: 20px;
+                bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+                top: auto;
+                left: auto;
+                display: block;
+                font-size: 16px;
+                padding: 8px 3px;
+                letter-spacing: 0;
+                transform: none !important;
+                z-index: 5000;
+            }
+            .top-nav-container .social-btn {
+                padding: 8px 3px;
+                letter-spacing: 2px;
+                transition: none;
+            }
+            .scroll-wrap {
+                overflow-x: auto;
+                overflow-y: hidden;
+                height: 100vh;
+                height: 100dvh;
+            }
+            .track {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-rows: 1fr 1fr;
+                gap: 14px;
+                padding: 60px 20px 90px 20px;
+                height: 100vh;
+                height: 100dvh;
+                width: max-content;
+                box-sizing: border-box;
+            }
+            .card-wide,
+            .card-half-top,
+            .card-half-bottom,
+            .card-stretch {
+                width: 70vw;
+            }
+            .card-half-top,
+            .card-half-bottom,
+            .card-stretch { height: auto; }
+            .card-wide { grid-row: span 2; }
+            .card:hover img { transform: none; }
+            .hola-mobile { display: none !important; }
+            .filter-buttons {
+                display: flex !important;
+                position: fixed;
+                bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+                left: 20px;
+                gap: 0;
+                z-index: 5000;
+                pointer-events: auto;
+            }
+            .filter-btn {
+                font-family: 'Inter', sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                color: inherit;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 8px 12px 4px 3px;
+                letter-spacing: 2px;
+                line-height: 1;
+                opacity: 0.3;
+                transition: opacity 0.3s ease;
+                background: none;
+            }
+            .filter-btn.active { opacity: 1; background: none; }
+            .filter-btn:hover { background: none; }
+            .mobile-social-btn {
+                font-family: 'Satoshi', sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+                color: inherit;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 8px 12px 4px 3px;
+                letter-spacing: 2px;
+                line-height: 1;
+                display: inline-block;
+            }
+            .mobile-social-btn:hover { background-size: calc(100% - 11px) 1px; }
+             .mobile-lets-talk {
+                display: none !important;
+            }
+            .mobile-lets-talk .social-row {
+                display: flex;
+                flex-direction: row;
+                gap: 8px;
+                justify-content: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav-container">
+        <div class="nav-button redes-button" id="redesButton" role="button" tabindex="0" aria-label="Go to Home">Hello</div>
+        <div class="nav-button work-button" id="workButton" role="button" tabindex="0" aria-label="Go to Work">Work</div>
+        <div class="nav-button light-button" id="lightButton" role="button" tabindex="0" aria-label="Toggle theme">Light</div>
+        <div class="nav-button hola-button" id="holaButton">
+            <span class="hola-text">Let's talk!</span>
+            <span class="hola-socials">
+                <button class="social-btn" data-url="https://www.instagram.com/pa___bz/">IG</button>
+                <button class="social-btn" data-url="https://www.linkedin.com/in/pablo-iba%C3%B1ez-5773891a6/" style="text-transform:lowercase;">in</button>
+                <button class="social-btn" data-url="https://wa.link/ovb1bg">WSP</button>
+            </span>
+        </div>
+    </div>
+
+    <div class="nav-button bottom-right-container" id="limaTimeContainer" style="cursor:pointer;">
+        <span id="tzLabel">Peru, Lima</span> <span id="limaTime">--:--</span>
+    </div>
+
+    <button class="ver-todo-button" id="verTodoBtn" aria-label="Ver todos los proyectos"><span class="desktop-text">Ver todo</span><span class="mobile-text">See all</span></button>
+
+    <div class="nav-button bottom-middle-scroll">
+        <span>Scroll</span>
+        <div class="scroll-track-horizontal"></div>
+    </div>
+
+    <div class="filter-buttons" id="filterButtons">
+        <button class="filter-btn active" data-filter="client">Client</button>
+        <button class="filter-btn" data-filter="freestyle">Freestyle</button>
+    </div>
+
+    <div class="scroll-wrap" id="scrollWrap">
+        <div class="track" id="track"></div>
+    </div>
+
+    <script>
+    // Theme
+    const themeBtn = document.getElementById('lightButton');
+    const saved = localStorage.getItem('theme');
+    function isMobile() { return window.innerWidth <= 768; }
+    function updateLightBtn(dark) {
+        themeBtn.textContent = dark ? 'Dark' : 'Light';
+    }
+    if (saved === 'dark') {
+        document.body.classList.add('dark-theme');
+        updateLightBtn(true);
+    } else {
+        updateLightBtn(false);
+    }
+    themeBtn.addEventListener('click', () => {
+        const dark = document.body.classList.toggle('dark-theme');
+        updateLightBtn(dark);
+        localStorage.setItem('theme', dark ? 'dark' : 'light');
+    });
+    window.addEventListener('resize', () => updateLightBtn(document.body.classList.contains('dark-theme')));
+
+    // Hello → index
+    document.getElementById('redesButton').addEventListener('click', () => {
+        window.location.href = '../';
+    });
+
+    // Work → scroll to top (already on Work page)
+    document.getElementById('workButton').addEventListener('click', () => {
+        document.getElementById('scrollWrap').scrollTo({ left: 0, behavior: 'smooth' });
+    });
+
+    // Clock
+    const timezones = [
+        { zone: 'America/Lima', label: 'Peru, Lima' },
+        { zone: 'Europe/Madrid', label: 'Madrid, España' }
+    ];
+    let currentTzIndex = 0;
+    function updateClock() {
+        const timeEl = document.getElementById('limaTime');
+        const tzLabelEl = document.getElementById('tzLabel');
+        if (!timeEl) return;
+        const tz = timezones[currentTzIndex];
+        const now = new Date();
+        timeEl.textContent = new Intl.DateTimeFormat('en-US', {
+            timeZone: tz.zone, hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true
+        }).format(now);
+        if (tzLabelEl) tzLabelEl.textContent = tz.label;
+    }
+    document.getElementById('limaTimeContainer').addEventListener('click', () => {
+        currentTzIndex = (currentTzIndex + 1) % timezones.length;
+        updateClock();
+    });
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    // Mouse wheel → horizontal scroll
+    const scrollWrap = document.getElementById('scrollWrap');
+    scrollWrap.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        scrollWrap.scrollLeft += e.deltaY;
+    }, { passive: false });
+
+    // Fixed order and slot mapping
+    const SLOT = [
+        { title: 'Al Este',                cls: 'card-wide' },
+        { title: 'Equipera',               cls: 'card-half-top' },
+        { title: 'UTEC',                   cls: 'card-half-bottom' },
+        { title: 'Mali × Infinito',        cls: 'card-wide' },
+        { title: 'Duardo',                 cls: 'card-stretch' },
+        { title: 'WAYKA',                  cls: 'card-stretch' },
+        { title: 'Arica',                  cls: 'card-stretch' },
+        { title: 'Agora Shop',             cls: 'card-stretch' },
+        { title: 'Casino Tokyo Bloom',     cls: 'card-wide' },
+        { title: 'Diversa',                cls: 'card-wide' },
+        // Freestyle
+        { title: 'INF',                    cls: 'card-wide' },
+        { title: 'PABZ',                   cls: 'card-half-top' },
+        { title: 'PLEBZ',                  cls: 'card-half-bottom' },
+        { title: 'PLOBZ ANGRY',            cls: 'card-wide' },
+        { title: 'PLOBZ',                  cls: 'card-stretch' },
+        { title: 'SHAPE',                  cls: 'card-stretch' },
+        { title: 'THORN EXP',              cls: 'card-wide' },
+        { title: 'THORN',                  cls: 'card-half-top' },
+        { title: 'TYPE',                   cls: 'card-half-bottom' },
+        { title: 'VALENCIA',               cls: 'card-wide' },
+        { title: 'WAVE',                   cls: 'card-wide' },
+    ];
+
+    // All projects in fixed order
+    const ALL_PROJECTS = [
+        { title: 'Al Este', type: 'client', img: 'client/aleste.png', page: '../aleste/' },
+        { title: 'Equipera', type: 'client', img: 'client/equipera.png' },
+        { title: 'UTEC', type: 'client', img: 'client/utec.m4v', video: true },
+        { title: 'Mali × Infinito', type: 'client', img: 'client/mali.jpg', page: '../mali/' },
+        { title: 'Duardo', type: 'client', img: 'client/duardo.png' },
+        { title: 'WAYKA', type: 'client', img: 'client/wayka.png' },
+        { title: 'Casino Tokyo Bloom', type: 'client', img: 'client/casinotb.png', page: '../casinotb/' },
+        { title: 'Diversa', type: 'client', img: 'client/diversa.png' },
+        { title: 'Arica', type: 'client', img: 'client/arica.png', comingSoon: true },
+        { title: 'Agora Shop', type: 'client', img: 'client/agora.png', comingSoon: true },
+        // Freestyle
+        { title: 'INF', type: 'freestyle', cloudinary: 'INF_xvkew0' },
+        { title: 'PABZ', type: 'freestyle', cloudinary: 'PABZ_svxulg' },
+        { title: 'PLEBZ', type: 'freestyle', img: 'FREESTYLE/PLEBZ.png' },
+        { title: 'PLOBZ ANGRY', type: 'freestyle', img: 'freestyle/PLOBZ_ANGRY.jpg' },
+        { title: 'PLOBZ', type: 'freestyle', cloudinary: 'PLOBZ_hwng1f' },
+        { title: 'SHAPE', type: 'freestyle', img: 'FREESTYLE/SHAPE.jpg' },
+        { title: 'THORN EXP', type: 'freestyle', cloudinary: 'THORN_EXP_wzinuf' },
+        { title: 'THORN', type: 'freestyle', cloudinary: 'THORN_tgxwcr' },
+        { title: 'TYPE', type: 'freestyle', cloudinary: 'TYPE_ggp1ea' },
+        { title: 'VALENCIA', type: 'freestyle', cloudinary: 'VALENCIA_q8lbqg' },
+        { title: 'WAVE', type: 'freestyle', img: 'FREESTYLE/WAVE.png' },
+    ];
+
+    const track = document.getElementById('track');
+    let currentFilter = 'client';
+    function renderProjects(filter) {
+        filter = filter || 'client';
+        track.innerHTML = '';
+            ALL_PROJECTS.forEach(p => {
+                if (p.type !== filter) return;
+            const slot = SLOT.find(s => s.title === p.title);
+            const card = document.createElement('div');
+            card.className = 'card ' + (slot ? slot.cls : 'card-stretch');
+            if (p.page) {
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', () => {
+                    const allCards = [...track.querySelectorAll('.card')];
+                    allCards.forEach((c, i) => {
+                        const delay = i * 50;
+                        setTimeout(() => {
+                            c.style.opacity = '0';
+                            c.style.transform = 'scale(0.96)';
+                        }, delay);
+                    });
+                    setTimeout(() => window.location.href = p.page, 100 + allCards.length * 50 + 300);
+                });
+            }
+            if (p.cloudinary) {
+                const vid = document.createElement('video');
+                vid.src = 'https://res.cloudinary.com/yaj8nng4/video/upload/v1/' + p.cloudinary + '.mp4';
+                vid.muted = true;
+                vid.loop = true;
+                vid.playsInline = true;
+                vid.autoplay = true;
+                vid.className = 'card-video';
+                card.appendChild(vid);
+            } else if (p.video) {
+                const vid = document.createElement('video');
+                vid.src = p.img;
+                vid.muted = true;
+                vid.loop = true;
+                vid.playsInline = true;
+                vid.autoplay = true;
+                vid.className = 'card-video';
+                card.appendChild(vid);
+            } else {
+                const img = document.createElement('img');
+                img.src = p.img;
+                img.alt = p.title;
+                img.loading = 'lazy';
+                card.appendChild(img);
+            }
+            if (p.type !== 'freestyle') {
+                const overlay = document.createElement('div');
+                overlay.className = 'card-overlay';
+                overlay.innerHTML = `<span class="card-title">${p.title}</span>`;
+                card.appendChild(overlay);
+            }
+            if (p.comingSoon) {
+                const phrases = ['Coming soon', 'Still Rendering...', 'Stay Tuned.', 'Cooking...', 'Soon-ish.', 'Making It Look Expensive...'];
+                const sphere = document.createElement('div');
+                sphere.className = 'coming-soon-sphere';
+                const txt = document.createElement('span');
+                txt.textContent = phrases[Math.floor(Math.random() * phrases.length)];
+                sphere.appendChild(txt);
+                card.appendChild(sphere);
+            }
+            track.appendChild(card);
+        });
+    }
+
+    renderProjects();
+
+    window.addEventListener('pageshow', function() {
+        const cards = track.querySelectorAll('.card');
+        cards.forEach(c => {
+            c.style.opacity = '';
+            c.style.transform = '';
+            c.style.transition = '';
+        });
+    });
+
+    // Filter buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (this.dataset.filter === currentFilter) return;
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const newFilter = this.dataset.filter;
+            const allCards = [...track.querySelectorAll('.card')];
+            allCards.forEach((c, i) => {
+                const delay = i * 50;
+                setTimeout(() => {
+                    c.style.opacity = '0';
+                    c.style.transform = 'scale(0.96)';
+                }, delay);
+            });
+            const animDelay = allCards.length * 50 + 100;
+            setTimeout(() => {
+                currentFilter = newFilter;
+                renderProjects(currentFilter);
+                const cards = track.querySelectorAll('.card');
+                cards.forEach((c, i) => {
+                    c.style.opacity = '0';
+                    c.style.transform = 'scale(0.96)';
+                    setTimeout(() => {
+                        c.style.transition = 'opacity 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1)';
+                        c.style.opacity = '1';
+                        c.style.transform = 'scale(1)';
+                    }, 80 + i * 60);
+                });
+            }, animDelay);
+            document.getElementById('scrollWrap').scrollTo({ left: 0, behavior: 'smooth' });
+        });
+    });
+
+    // Animate cards appearing when coming back from a project
+    if (sessionStorage.getItem('fromProject')) {
+        sessionStorage.removeItem('fromProject');
+        const cards = track.querySelectorAll('.card');
+        cards.forEach((c, i) => {
+            c.style.opacity = '0';
+            c.style.transform = 'scale(0.96)';
+            setTimeout(() => {
+                c.style.transition = 'opacity 0.3s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1)';
+                c.style.opacity = '1';
+                c.style.transform = 'scale(1)';
+            }, 80 + i * 60);
+        });
+    }
+    </script>
+    <script>
+    // Desktop Let's talk!
+    const holaButton = document.getElementById('holaButton');
+    let isHolaActive = false;
+    function resetHolaButton() {
+        if (isHolaActive) {
+            if (window.innerWidth <= 768) {
+                holaButton.classList.remove('active-socials');
+                isHolaActive = false;
+                return;
+            }
+            const btns = holaButton.querySelectorAll('.social-btn');
+            btns.forEach(btn => {
+                btn.style.opacity = '0';
+                btn.style.transform = 'scale(0.96)';
+            });
+            setTimeout(() => {
+                holaButton.classList.remove('active-socials');
+                isHolaActive = false;
+            }, 250);
+        }
+    }
+    if (holaButton) {
+        holaButton.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (isHolaActive) {
+                resetHolaButton();
+                return;
+            }
+            this.classList.add('active-socials');
+            if (window.innerWidth > 768) {
+                const btns = this.querySelectorAll('.social-btn');
+                btns.forEach(btn => {
+                    btn.style.opacity = '0';
+                    btn.style.transform = 'scale(0.96)';
+                    btn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        window.open(this.dataset.url, '_blank');
+                        resetHolaButton();
+                    });
+                });
+                requestAnimationFrame(() => {
+                    btns.forEach(btn => {
+                        btn.style.opacity = '';
+                        btn.style.transform = '';
+                    });
+                });
+            } else {
+                const btns = this.querySelectorAll('.social-btn');
+                btns.forEach(btn => {
+                    btn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        window.open(this.dataset.url, '_blank');
+                        resetHolaButton();
+                    });
+                });
+            }
+            isHolaActive = true;
+        });
+        document.addEventListener('click', function(e) {
+            if (isHolaActive && !holaButton.contains(e.target)) resetHolaButton();
+        });
+    }
+    </script>
+    <button class="mobile-lets-talk" id="mobileLetstalk" aria-label="Open social links">Let's talk!</button>
+    <script>
+        const mobileBtn = document.getElementById('mobileLetstalk');
+        let mobileExpanded = false;
+        mobileBtn.addEventListener('click', function() {
+            if (mobileExpanded) {
+                this.textContent = "Let's talk!";
+                this.style.padding = '8px 3px 4px 12px';
+                mobileExpanded = false;
+            } else {
+                this.innerHTML = '<span class="social-row"><button class="mobile-social-btn" data-url="https://www.instagram.com/pa___bz/">IG</button><button class="mobile-social-btn" style="text-transform:lowercase;" data-url="https://www.linkedin.com/in/pablo-iba%C3%B1ez-5773891a6/">in</button><button class="mobile-social-btn" data-url="https://wa.link/ovb1bg">WSP</button></span>';
+                this.style.padding = '0';
+                this.querySelectorAll('[data-url]').forEach(btn => {
+                    btn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        window.open(this.dataset.url, '_blank');
+                    });
+                });
+                mobileExpanded = true;
+            }
+        });
+        document.addEventListener('click', function(e) {
+            if (mobileExpanded && !mobileBtn.contains(e.target)) {
+                mobileBtn.textContent = "Let's talk!";
+                mobileBtn.style.padding = '8px 3px 4px 12px';
+                mobileExpanded = false;
+            }
+        });
+    </script>
+</body>
+</html>

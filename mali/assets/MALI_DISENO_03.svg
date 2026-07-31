@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 268.24 300">
+  <!-- Generator: Adobe Illustrator 30.5.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #7465d2;
+      }
+
+      .st1 {
+        fill: #ff38ba;
+      }
+
+      .st2 {
+        fill: #a072b1;
+      }
+
+      .st3 {
+        fill: #ff8bed;
+      }
+
+      .st4 {
+        fill: #ffb200;
+      }
+
+      .st5 {
+        fill: #ff000b;
+      }
+    </style>
+  </defs>
+  <rect width="268.24" height="300"/>
+  <g>
+    <rect class="st4" x="134.12" y="246.94" width="20.76" height="24.24"/>
+    <rect class="st4" x="154.88" y="222.71" width="20.76" height="24.24"/>
+    <rect class="st4" x="175.65" y="198.47" width="20.76" height="24.24"/>
+    <rect class="st2" x="134.12" y="222.71" width="20.76" height="24.24"/>
+    <rect class="st2" x="154.88" y="198.47" width="20.76" height="24.24"/>
+    <rect class="st2" x="175.65" y="174.24" width="20.76" height="24.24"/>
+    <rect class="st3" x="113.36" y="28.82" width="20.76" height="24.24"/>
+    <rect class="st3" x="92.59" y="53.06" width="20.76" height="24.24"/>
+    <rect class="st3" x="71.83" y="77.29" width="20.76" height="24.24"/>
+    <rect class="st1" x="113.36" y="53.06" width="20.76" height="24.24"/>
+    <rect class="st1" x="92.59" y="77.29" width="20.76" height="24.24"/>
+    <rect class="st1" x="71.83" y="101.53" width="20.76" height="24.24"/>
+  </g>
+  <polygon class="st5" points="113.36 77.29 113.36 101.53 113.35 101.53 106.31 101.53 92.59 101.53 92.59 125.76 71.83 125.76 71.83 150 92.59 150 106.31 150 113.35 150 113.36 150 124.72 150 134.12 150 134.12 125.77 134.12 125.76 134.12 101.53 134.12 77.29 113.36 77.29"/>
+  <polygon class="st0" points="191.32 150 175.65 150 175.64 150 158.31 150 154.88 150 134.12 150 134.12 174.24 134.12 198.47 134.12 198.48 134.12 222.71 154.88 222.71 154.88 198.48 175.64 198.48 175.64 174.24 175.65 174.24 191.32 174.24 196.41 174.24 196.41 150 191.32 150"/>
+</svg>

@@ -1,0 +1,7 @@
+*.mp4
+*.mov
+*.webm
+*.avi
+*.zip
+.DS_Store
+node_modules/

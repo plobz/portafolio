@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Tokyo Bloom — Branding &amp; Visual Identity by PABZ</title>
+    <meta name="description" content="Branding and visual identity for Casino Tokyo Bloom by Pablo Ibañez (PABZ). Art direction, brand strategy and design by a Senior Brand Designer.">
+    <meta name="keywords" content="PABZ, Pablo Ibañez, Casino Tokyo Bloom, branding, visual identity, art direction, brand strategy">
+    <meta name="author" content="Pablo Ibáñez">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://p4bz.com/CasinoTB/">
+    <meta property="og:title" content="Casino Tokyo Bloom — Branding &amp; Visual Identity by PABZ">
+    <meta property="og:description" content="Branding, visual identity, and art direction for Casino Tokyo Bloom by Pablo Ibañez, Senior Brand Designer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://p4bz.com/CasinoTB/">
+    <meta property="og:image" content="https://p4bz.com/CasinoTB/assets/01_casinotb%20hero.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="PABZ">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Casino Tokyo Bloom — Branding &amp; Visual Identity by PABZ">
+    <meta name="twitter:description" content="Branding and visual identity for Casino Tokyo Bloom by Pablo Ibañez, Senior Brand Designer.">
+    <meta name="twitter:image" content="https://p4bz.com/CasinoTB/assets/01_casinotb%20hero.jpg">
+    <link rel="icon" type="image/png" href="../emoji.png">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('../assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scrollbar-width: none; -ms-overflow-style: none; }
+        html::-webkit-scrollbar { display: none; }
+
+        @view-transition { navigation: auto; }
+        ::view-transition-old(root),
+        ::view-transition-new(root) { animation-duration: 0s; }
+        ::view-transition-old(top-nav),
+        ::view-transition-new(top-nav) { animation-duration: 0s; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #e5e5e5;
+            color: #000;
+            min-height: 100vh;
+            transition: background 0.4s ease, color 0.4s ease;
+        }
+        body.dark-theme {
+            background: #000;
+            color: #fff;
+        }
+
+        .nav-button {
+            position: fixed;
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            color: #ff2703;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 5000;
+            text-transform: none;
+            letter-spacing: 2px;
+            padding: 8px 12px 4px;
+            user-select: none;
+            line-height: 1;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-repeat: no-repeat;
+            background-position: 12px bottom;
+            background-origin: padding-box;
+            background-clip: padding-box;
+            background-size: 0px 1px;
+            transition: background-size 0.3s ease;
+        }
+        .nav-button:hover { background-size: calc(100% - 24px) 1px; }
+        body.dark-theme .nav-button { color: #fff; }
+        body:not(.dark-theme) .nav-button { color: #000; }
+
+        .top-nav-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 5000;
+            pointer-events: none;
+            view-transition-name: top-nav;
+        }
+        .top-nav-container .nav-button:last-child {
+            margin-left: auto;
+        }
+        .top-nav-container .nav-button { position: relative; top: auto; left: auto; right: auto; bottom: auto; pointer-events: auto; }
+        .redes-button { width: auto; text-align: left; display: inline-block; padding-left: 3px; background-position: 3px bottom; }
+        .redes-button:hover { background-size: calc(100% - 15px) 1px; }
+        .work-button { width: auto; display: inline-block; }
+        .light-button { text-transform: none; }
+        .hola-button { text-align: right; display: inline-block; background-position: right 3px bottom; padding-right: 3px; }
+        .hola-button:hover { background-size: calc(100% - 15px) 1px; }
+        .hola-button.active-socials { padding: 0; background-size: 0px 1px !important; }
+        .hola-socials { display: none; }
+        .hola-button.active-socials .hola-text { display: none; }
+        .hola-button.active-socials .hola-socials { display: inline; }
+
+        .social-btn {
+            background: transparent; border: none; font-family: 'Satoshi', sans-serif;
+            font-weight: 500; font-size: 16px; color: inherit; cursor: pointer;
+            padding: 8px 12px 4px 3px; margin: 0; letter-spacing: 1px;
+            display: inline-block; line-height: 1;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-repeat: no-repeat;
+            background-position: 3px bottom;
+            background-origin: padding-box;
+            background-clip: padding-box;
+            background-size: 0px 1px;
+            transition: background-size 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
+        }
+        .social-btn:hover { background-size: calc(100% - 15px) 1px; }
+        .desktop-text { display: inline; }
+        .mobile-text { display: none; }
+
+        .project-page {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 0 100px;
+        }
+
+        .hero {
+            width: 100%;
+            margin-bottom: 16px;
+            position: relative;
+            padding: 60px 23px 0;
+        }
+        .hero img, .hero video {
+            width: 100%;
+            height: calc(80vh + 40px);
+            object-fit: cover;
+            display: block;
+            border-radius: 12px;
+            transition: opacity 0.25s ease, transform 0.3s ease;
+        }
+
+        .info-box {
+            padding: 24px;
+            border-radius: 12px;
+            background: #d4d4d4;
+            font-size: 15px;
+            line-height: 1.6;
+            letter-spacing: 0.02em;
+            transition: opacity 0.25s ease, transform 0.3s ease;
+        }
+        body.dark-theme .info-box {
+            background: #1a1a1a;
+        }
+        .info-box strong {
+            font-size: 12px;
+            color: #888;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 320px) minmax(0, 320px) 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+            justify-content: center;
+            padding: 0 23px;
+        }
+        .intro-grid .info-box {
+            margin: 0;
+            width: auto;
+            padding: 16px;
+            font-size: 20px;
+        }
+        .intro-grid .img-col img {
+            width: 100%;
+            height: 100%;
+            max-height: 700px;
+            object-fit: cover;
+            display: block;
+            border-radius: 12px;
+        }
+
+        .credits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+            padding: 0 23px;
+        }
+        .credits-grid .info-box {
+            margin: 0;
+            width: auto;
+            font-size: 14px;
+        }
+        .credits-grid .credits-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px 32px;
+            align-content: start;
+        }
+        .credits-grid .meta-label {
+            font-size: 12px;
+            letter-spacing: 0.15em;
+            color: #888;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .credits-grid .meta-value {
+            font-size: 14px;
+            letter-spacing: 0.02em;
+        }
+
+        .visual-break {
+            width: 100%;
+            margin-bottom: 16px;
+            padding: 0 23px;
+        }
+        .visual-break img, .visual-break > video {
+            width: 100%;
+            height: calc(80vh + 40px);
+            object-fit: cover;
+            display: block;
+        }
+        .hero-video-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 640 / 360;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .hero-video-wrapper iframe,
+        .hero-video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        .visual-sq {
+            width: 100%;
+            margin-bottom: 16px;
+            padding: 0 23px;
+        }
+        .visual-sq .sq {
+            width: 100%;
+            height: min(70vh, 40vw);
+            display: flex;
+            gap: 16px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .visual-sq .sq-left, .visual-sq .sq-right {
+            height: 100%;
+            aspect-ratio: 268.24 / 300;
+            flex-shrink: 0;
+            background: #eaeaea;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .visual-sq .sq-left img, .visual-sq .sq-right img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 0 !important;
+            object-fit: fill;
+        }
+        .visual-sq .sq-mid {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            gap: 16px;
+            overflow: hidden;
+        }
+        .visual-sq .sq-mid .img-wrap {
+            flex: 1;
+            min-width: 0;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .visual-sq .sq-mid .img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .project-page section img, .project-page section video {
+            border-radius: 12px;
+            transition: opacity 0.25s ease, transform 0.3s ease;
+        }
+        .casino-snap, .casino-snap-2 { transition: none !important; }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 16px;
+            padding: 0 23px;
+        }
+        .gallery-item { display: block; width: 100%; }
+        .gallery-item img, .gallery-item video { width: 100%; display: block; object-fit: cover; }
+        .gallery-item.span-full { grid-column: 1 / -1; }
+        .gallery-item.slideshow { position: relative; height: min(90vh, 60vw); }
+        .gallery-item.slideshow .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; }
+        .gallery-item.slideshow .slide.active { opacity: 1; }
+        .gallery-item.tall img, .gallery-item.tall video { height: 80vh; }
+        .gallery-item.wide img, .gallery-item.wide video { height: 55vh; }
+        .gallery-item.square img, .gallery-item.square video { height: 50vh; }
+        .gallery-item:first-child img, .gallery-item:first-child video { height: calc(80vh + 40px); }
+        .gallery-item:first-child { height: min(70vh, 40vw); }
+        .gallery-item.svg-full { height: auto !important; }
+        .gallery-item.svg-full img { height: auto !important; }
+        .gallery-item.flex-row { min-height: auto !important; height: auto !important; }
+        .gallery-item.flex-row > div { min-height: 0; }
+        .gallery-item.flex-row video { height: auto !important; }
+        .gallery-item:nth-child(2) img, .gallery-item:nth-child(2) video { height: calc(80vh + 120px); }
+        .gallery-item:nth-child(2) { height: min(70vh, 40vw); }
+        .gallery-item:nth-child(5) img, .gallery-item:nth-child(5) video { height: calc(80vh + 120px); }
+        .gallery-item:nth-child(6) img, .gallery-item:nth-child(6) video { height: calc(80vh + 40px); }
+
+        .outro { width: 100%; padding: 0 23px; margin-bottom: 16px; }
+        .outro img, .outro video { width: 100%; height: auto; display: block; border-radius: 12px; }
+
+        @media (max-width: 768px) {
+            .project-page { padding: 30px 0 80px; }
+            .hero, .intro-grid, .credits-grid, .visual-break, .gallery, .outro { margin-bottom: 16px; }
+            .hero img, .hero video { height: calc(50vh + 40px); }
+            .hero { padding-top: 30px; }
+            .intro-grid { grid-template-columns: 1fr; gap: 16px; }
+            .intro-grid .img-col { grid-column: 1; }
+            .intro-grid .img-col img { height: 50vh; }
+            .credits-grid { grid-template-columns: 1fr; }
+            .credits-grid .credits-items { grid-template-columns: 1fr; }
+            .visual-sq .sq { height: min(50vh, 60vw); }
+            .visual-break img, .visual-break > video { height: auto; object-fit: fill; }
+            .gallery { grid-template-columns: 1fr; gap: 12px; }
+            .gallery-item.tall img, .gallery-item.tall video,
+            .gallery-item.wide img, .gallery-item.wide video,
+            .gallery-item.square img, .gallery-item.square video { height: 40vh; }
+            .gallery-item:first-child img, .gallery-item:first-child video { height: calc(50vh + 40px); }
+            .gallery-item:first-child { height: min(50vh, 60vw); }
+            .gallery-item.svg-full { height: auto !important; }
+            .gallery-item.svg-full img { height: auto !important; }
+             .gallery-item.flex-row { flex-direction: column; min-height: auto !important; gap: 0; }
+             .gallery-item.flex-row > div { min-height: auto; height: auto !important; }
+             .gallery-item.flex-row > div:last-child { width: 100%; flex: none !important; aspect-ratio: 1080 / 1350; height: auto; overflow: visible !important; }
+             .gallery-item.flex-row video { height: auto !important; }
+             .gallery-item.flex-row .slideshow-item { margin-bottom: 0; }
+            .gallery-item.span-full.wide { display: none !important; }
+            .gallery-mobile-slideshow {
+                display: flex !important;
+                position: relative;
+                width: 100%;
+                aspect-ratio: 268.24 / 300;
+                border-radius: 12px;
+                overflow: hidden;
+                background: #eaeaea;
+            }
+            .gallery-item.slideshow { height: min(70vh, 80vw); }
+            .desktop-only { display: none !important; }
+            .mobile-only { display: block !important; width: 100% !important; height: auto !important; }
+            .gallery-item[style*="004e37"] { height: auto !important; aspect-ratio: 881.32 / 786.78; }
+            .gallery-item[style*="004e37"] .mobile-only { position: static !important; transform: none !important; }
+            section[style*="padding"] > div:first-child { height: auto !important; aspect-ratio: 881.32 / 786.78; padding: 0; }
+            .visual-sq .sq { display: none !important; }
+            .visual-sq .mobile-slideshow {
+                display: flex !important;
+                position: relative;
+                width: 100%;
+                aspect-ratio: 268.24 / 300;
+                border-radius: 12px;
+                overflow: hidden;
+                background: #eaeaea;
+            }
+            .mobile-slideshow .ms-slide {
+                position: absolute;
+                top: 0; left: 0;
+                width: 100%; height: 100%;
+                opacity: 0;
+                animation: msSnap 6s step-end infinite;
+            }
+            .mobile-slideshow .ms-slide:first-child { animation-delay: 0s; }
+            .mobile-slideshow .ms-slide:nth-child(2) { animation-delay: 3s; }
+            .mobile-slideshow .ms-slide img {
+                width: 100%; height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+            @keyframes msSnap {
+                0%, 45% { opacity: 1; }
+                50%, 95% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+            .gallery-item:nth-child(2) img, .gallery-item:nth-child(2) video { height: calc(50vh + 120px); }
+            .gallery-item:nth-child(2) { height: min(50vh, 60vw); }
+            .gallery-item:nth-child(3) img, .gallery-item:nth-child(3) video { height: auto !important; object-fit: fill !important; }
+            .gallery-item:nth-child(5) img, .gallery-item:nth-child(5) video { height: auto !important; object-fit: fill !important; }
+            .gallery-item:nth-child(6) img, .gallery-item:nth-child(6) video { height: 40vh !important; }
+             .gallery-item.flex-row { flex-direction: column; min-height: auto !important; height: auto !important; gap: 0; }
+            .gallery-item.flex-row > div { min-height: auto; height: auto !important; }
+            .gallery-item.flex-row img { height: auto !important; object-fit: cover !important; }
+            .gallery-item.flex-row video { width: 100%; height: auto !important; display: block; }
+            .outro img, .outro video { height: auto; }
+            .desktop-text { display: none !important; }
+            .mobile-text { display: inline !important; }
+            #workButton { display: none !important; }
+            #holaButton { display: block; order: 5; position: relative; top: auto; font-size: 16px; padding: 8px 3px; }
+            #holaButton.active-socials { padding: 8px 3px; }
+            #holaButton .hola-socials {
+                display: inline;
+                position: absolute;
+                top: 0;
+                right: 0;
+                white-space: nowrap;
+                visibility: hidden;
+            }
+            #holaButton.active-socials .hola-socials {
+                visibility: visible;
+            }
+            #holaButton.active-socials .hola-text {
+                display: inline;
+                visibility: hidden;
+            }
+            #redesButton {
+                order: 1;
+                position: relative;
+                top: auto;
+                left: auto;
+                display: block;
+                font-size: 16px;
+                padding: 8px 3px;
+                margin-right: 8px;
+            }
+            #lightButton {
+                position: fixed !important;
+                right: 20px;
+                bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+                top: auto;
+                left: auto;
+                display: block;
+                font-size: 16px;
+                padding: 8px 3px;
+                letter-spacing: 0;
+                transform: none !important;
+                z-index: 5000;
+            }
+            .top-nav-container .social-btn {
+                padding: 8px 3px;
+                letter-spacing: 2px;
+                transition: none;
+            }
+            .top-nav-container {
+                display: flex;
+                justify-content: space-between;
+                top: 20px;
+                left: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-nav-container">
+        <div class="nav-button redes-button" id="redesButton" role="button" tabindex="0" aria-label="Go to Home"><span class="desktop-text">Hello</span><span class="mobile-text">Back</span></div>
+        <div class="nav-button work-button" id="workButton" role="button" tabindex="0" aria-label="Go to Work">Work</div>
+        <div class="nav-button light-button" id="lightButton" role="button" tabindex="0" aria-label="Toggle theme">Light</div>
+        <div class="nav-button hola-button" id="holaButton">
+            <span class="hola-text">Let's talk!</span>
+            <span class="hola-socials">
+                <button class="social-btn" data-url="https://www.instagram.com/pa___bz/">IG</button>
+                <button class="social-btn" data-url="https://www.linkedin.com/in/pablo-iba%C3%B1ez-5773891a6/" style="text-transform:lowercase;">in</button>
+                <button class="social-btn" data-url="https://wa.link/ovb1bg">WSP</button>
+            </span>
+        </div>
+    </div>
+
+    <main class="project-page">
+
+        <section class="hero" style="position:relative;">
+            <img src="assets/01_casinotb hero.jpg" alt="Casino Tokyo Bloom intro" loading="lazy" decoding="async">
+                    </section>
+
+        <section class="intro-grid">
+            <div class="info-box" style="position:relative;">
+                <strong>The Challenge</strong>
+                Casino, Peru's favorite cookie brand for nearly 30 years, had just launched a full packaging redesign. The next step was to keep that momentum alive — with a limited edition bold and exciting enough to get people talking, buying fast, and wanting to collect it.
+                            </div>
+            <div class="info-box" style="position:relative;">
+                <strong>The Solution</strong>
+                Casino handed the pen to its own community, co-creating a limited flavor called Tokyo Bloom: cherry blossom, taro, and ginger. The packaging follows suit — a Godzilla-like icon, lanterns, torii gates, and origami cranes in bold red and pink, in a dense cartoon-pop style. Only a few weeks on shelves, built to be collected.
+                            </div>
+            <div class="img-col" style="position:relative;background:#ff0242;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:24px;">
+                <img src="assets/02_casinotb letras.svg" alt="Casino Tokyo Bloom" loading="lazy" decoding="async" style="width:70%;height:auto;display:block;">
+                            </div>
+        </section>
+
+        <section class="visual-break" style="position:relative;">
+            <div class="hero-video-wrapper">
+                <video autoplay muted loop playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;">
+                    <source src="https://res.cloudinary.com/yaj8nng4/video/upload/03_casinotb_logo_ornbqt.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery-item span-full svg-full" style="position:relative;display:flex;justify-content:center;align-items:center;">
+                <img src="assets/03_casinotb_ilustraciones.svg" alt="" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;">
+                            </div>
+            <div class="gallery-item span-full flex-row" style="position:relative;display:flex;gap:20px;align-items:stretch;">
+                <div style="flex:1.2;position:relative;overflow:hidden;border-radius:12px;background:#000;">
+                    <img src="assets/05_casinotb_closeup1.jpg" alt="" loading="lazy" decoding="async" class="casino-snap" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+                    <img src="assets/06_casinotb_closeup2.jpg" alt="" loading="lazy" decoding="async" class="casino-snap" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0;">
+                                    </div>
+                <div style="flex:1;overflow:hidden;border-radius:12px;position:relative;background:#000;">
+                    <video autoplay muted loop playsinline preload="auto" style="width:100%;height:auto;display:block;">
+                        <source src="https://res.cloudinary.com/yaj8nng4/video/upload/04_casinotb_animacion_nid1sd.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                                    </div>
+            </div>
+            <div class="gallery-item span-full" style="position:relative;">
+                <img src="assets/07_casinotb_lateral.jpg" alt="" loading="lazy" decoding="async" style="height:calc(80vh + 40px);object-fit:cover;">
+                            </div>
+            <div class="gallery-item span-full flex-row" style="position:relative;display:flex;gap:16px;align-items:stretch;">
+                <div style="flex:1.5;display:flex;overflow:hidden;border-radius:12px;background:#000;position:relative;">
+                    <img src="assets/09_casinotb_polo.jpg" alt="" loading="lazy" decoding="async" class="casino-snap-2" style="flex:0 0 100%;width:100%;height:100%;object-fit:cover;object-position:50% 50%;transform:scale(1.02);">
+                    <img src="assets/09_casinotb_llavero.jpg" alt="" loading="lazy" decoding="async" class="casino-snap-2" style="flex:0 0 100%;width:100%;height:100%;object-fit:cover;object-position:50% 50%;opacity:0;margin-left:-100%;transform:scale(1.02);">
+                                    </div>
+                <div style="flex:1;overflow:hidden;border-radius:12px;position:relative;background:#000;">
+                    <video autoplay muted loop playsinline preload="auto" style="width:100%;height:auto;display:block;">
+                        <source src="https://res.cloudinary.com/yaj8nng4/video/upload/10_casinotb_h927qh.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                                    </div>
+            </div>
+            <div class="gallery-item span-full" style="position:relative;">
+                <img src="assets/08_casinotb_sushi.jpg" alt="" loading="lazy" decoding="async" style="height:calc(80vh + 40px);object-fit:cover;">
+                            </div>
+            <div class="gallery-item span-full" style="position:relative;">
+                <img src="assets/11_casinotb_edificio.jpg" alt="" loading="lazy" decoding="async" style="width:100%;object-fit:cover;">
+                            </div>
+        </section>
+
+        <section class="credits-grid">
+            <div class="info-box">
+                <strong>Detailed Overview</strong>
+                Casino Tokyo Bloom is a limited edition co-created with the Casino Lovers community, fusing cherry blossom, taro, and ginger into a new flavor for the brand. Available for just a few weeks, it was designed to spark urgency and social buzz.
+
+The packaging leans into Asian iconography: a Godzilla-inspired figure, cherry blossoms, lanterns, a torii gate, a daruma doll, and an origami crane, paired with kanji tied to fun and sweetness. Intense red plays against cherry blossom pink for shelf impact, with a custom logotype marking the edition apart from the standard line.
+
+Rendered in an expressive cartoon-pop style with dense, detail-rich illustration, the design rewards a closer look — controlled chaos built to catch the eye and turn a cookie pack into something worth collecting.
+            </div>
+            <div class="info-box credits-items">
+                <div>
+                    <div class="meta-label">Credits</div>
+                    <div class="meta-value">Infinito</div>
+                </div>
+                <div>
+                    <div class="meta-label">Creative Director</div>
+                    <div class="meta-value">Joe Arbaiza</div>
+                </div>
+                <div>
+                    <div class="meta-label">Designer</div>
+                    <div class="meta-value">Pablo Ibáñez<br>Leo Chávez</div>
+                </div>
+                <div>
+                    <div class="meta-label">Illustrator</div>
+                    <div class="meta-value">Gabriela Garland</div>
+                </div>
+                <div>
+                    <div class="meta-label">Project Director</div>
+                    <div class="meta-value">Vanessa Graham</div>
+                </div>
+                <div>
+                    <div class="meta-label">Project Manager</div>
+                    <div class="meta-value">Arianne Hilbck</div>
+                </div>
+                <div>
+                    <div class="meta-label">Final Artwork Specialist</div>
+                    <div class="meta-value">Cinthia Galarza</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const themeBtn = document.getElementById('lightButton');
+        const saved = localStorage.getItem('theme');
+        function isMobile() { return window.innerWidth <= 768; }
+        function updateLightBtn(dark) {
+        themeBtn.textContent = dark ? 'Dark' : 'Light';
+        }
+        if (saved === 'dark') {
+            document.body.classList.add('dark-theme');
+            updateLightBtn(true);
+        } else {
+            updateLightBtn(false);
+        }
+        themeBtn.addEventListener('click', () => {
+            const dark = document.body.classList.toggle('dark-theme');
+            updateLightBtn(dark);
+            localStorage.setItem('theme', dark ? 'dark' : 'light');
+        });
+        window.addEventListener('resize', () => updateLightBtn(document.body.classList.contains('dark-theme')));
+
+        // Image exit animation
+        function exitPage(href) {
+            sessionStorage.setItem('fromProject', 'true');
+            const allEls = document.querySelectorAll('.project-page section video, .project-page section img, .project-page .info-box');
+            allEls.forEach((el, i) => {
+                setTimeout(() => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'scale(0.96)';
+                }, i * 50);
+            });
+            setTimeout(() => { window.location.href = href; }, 100 + allEls.length * 50 + 300);
+        }
+        document.getElementById('redesButton').addEventListener('click', () => {
+            const href = window.innerWidth <= 768 ? '../work/' : '../';
+            exitPage(href);
+        });
+        document.getElementById('workButton').addEventListener('click', () => {
+            exitPage('../work/');
+        });
+
+        const holaButton = document.getElementById('holaButton');
+        let isHolaActive = false;
+        function resetHolaButton() {
+            if (isHolaActive) {
+                if (window.innerWidth <= 768) {
+                    holaButton.classList.remove('active-socials');
+                    isHolaActive = false;
+                    return;
+                }
+                const btns = holaButton.querySelectorAll('.social-btn');
+                btns.forEach(btn => {
+                    btn.style.opacity = '0';
+                    btn.style.transform = 'scale(0.96)';
+                });
+                setTimeout(() => {
+                    holaButton.classList.remove('active-socials');
+                    isHolaActive = false;
+                }, 250);
+            }
+        }
+        holaButton.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (isHolaActive) {
+                resetHolaButton();
+                return;
+            }
+            this.classList.add('active-socials');
+            if (window.innerWidth > 768) {
+                const btns = this.querySelectorAll('.social-btn');
+                btns.forEach(btn => {
+                    btn.style.opacity = '0';
+                    btn.style.transform = 'scale(0.96)';
+                    btn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        window.open(this.dataset.url, '_blank');
+                        resetHolaButton();
+                    });
+                });
+                requestAnimationFrame(() => {
+                    btns.forEach(btn => {
+                        btn.style.opacity = '';
+                        btn.style.transform = '';
+                    });
+                });
+            } else {
+                const btns = this.querySelectorAll('.social-btn');
+                btns.forEach(btn => {
+                    btn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        window.open(this.dataset.url, '_blank');
+                        resetHolaButton();
+                    });
+                });
+            }
+            isHolaActive = true;
+        });
+        document.addEventListener('click', function(e) {
+            if (isHolaActive && !holaButton.contains(e.target)) resetHolaButton();
+        });
+
+        // Entrance animation
+        const entries = document.querySelectorAll('.project-page section video, .project-page section img, .project-page .info-box');
+        entries.forEach((el, i) => {
+            el.style.opacity = '0';
+            el.style.transform = 'scale(0.96)';
+            setTimeout(() => {
+                el.style.opacity = '';
+                el.style.transform = '';
+            }, 100 + i * 20);
+        });
+
+        // Mobile lightbox for images and videos
+        const lbStyle = document.createElement('style');
+        lbStyle.textContent = '@keyframes lbZoom{from{transform:scale(0.7);opacity:0}to{transform:scale(1);opacity:1}}';
+        document.head.appendChild(lbStyle);
+
+        const lightbox = document.createElement('div');
+        lightbox.id = 'mobileLightbox';
+        lightbox.style.cssText = 'display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:99999;justify-content:center;align-items:center;cursor:zoom-out;';
+        const lbContent = document.createElement('div');
+        lbContent.style.cssText = 'max-width:95%;max-height:95%;animation:lbZoom .25s ease-out;';
+        lightbox.appendChild(lbContent);
+        lightbox.addEventListener('click', () => { lightbox.style.display = 'none'; if (lbContent.querySelector('video')) lbContent.querySelector('video').pause(); });
+        document.body.appendChild(lightbox);
+
+        function openLightbox(el) {
+            if (!isMobile()) return;
+            lbContent.innerHTML = '';
+            const tag = el.tagName.toLowerCase();
+            if (tag === 'img') {
+                const img = document.createElement('img');
+                img.src = el.src;
+                img.style.cssText = 'max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;display:block;';
+                lbContent.appendChild(img);
+            } else if (tag === 'video') {
+                const vid = document.createElement('video');
+                vid.src = el.querySelector('source') ? el.querySelector('source').src : el.src;
+                vid.controls = true;
+                vid.autoplay = true;
+                vid.style.cssText = 'max-width:100%;max-height:100%;border-radius:8px;display:block;';
+                lbContent.appendChild(vid);
+            }
+            lightbox.style.display = 'flex';
+        }
+
+        if (isMobile()) {
+            document.querySelectorAll('.project-page section img, .project-page section video').forEach(el => {
+                el.style.cursor = 'zoom-in';
+                el.addEventListener('click', function() { openLightbox(this); });
+            });
+        }
+
+    </script>
+    <script>
+    (function() {
+        var snaps = document.querySelectorAll('.casino-snap');
+        if (snaps.length >= 2) {
+            var showFirst = true;
+            setInterval(function() {
+                snaps[0].style.opacity = showFirst ? '0' : '1';
+                snaps[1].style.opacity = showFirst ? '1' : '0';
+                showFirst = !showFirst;
+            }, 3000);
+        }
+        var snaps2 = document.querySelectorAll('.casino-snap-2');
+        if (snaps2.length >= 2) {
+            snaps2[0].style.opacity = '1';
+            snaps2[1].style.opacity = '0';
+            var showFirst2 = true;
+            setInterval(function() {
+                snaps2[0].style.opacity = showFirst2 ? '0' : '1';
+                snaps2[1].style.opacity = showFirst2 ? '1' : '0';
+                showFirst2 = !showFirst2;
+            }, 3000);
+        }
+    })();
+    </script>
+</body>
+</html>
