@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mali × Infinito — Branding &amp; Visual Identity by PABZ</title>
-    <meta name="description" content="Branding and visual identity for Mali × Infinito by Pablo Ibañez (PABZ). Art direction, brand strategy and design by a Senior Brand Designer.">
-    <meta name="keywords" content="PABZ, Pablo Ibañez, Mali, Infinito, branding, visual identity, art direction, brand strategy">
+    <title>UTEC — Brand Identity &amp; Art Direction by PABZ</title>
+    <meta name="description" content="Brand identity and art direction for UTEC (Universidad de Ingeniería y Tecnología) by Pablo Ibañez (PABZ). Visual systems, motion and digital design for one of Peru's leading universities.">
+    <meta name="keywords" content="PABZ, Pablo Ibañez, UTEC, university, branding, visual identity, art direction, motion design, digital design">
     <meta name="author" content="Pablo Ibáñez">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://p4bz.com/Mali/">
-    <meta property="og:title" content="Mali × Infinito — Branding &amp; Visual Identity by PABZ">
-    <meta property="og:description" content="Branding, visual identity, and art direction for Mali × Infinito by Pablo Ibañez, Senior Brand Designer.">
+    <link rel="canonical" href="https://p4bz.com/utec/">
+    <meta property="og:title" content="UTEC — Brand Identity &amp; Art Direction by PABZ">
+    <meta property="og:description" content="Brand identity and art direction for UTEC by Pablo Ibañez, Senior Brand Designer.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://p4bz.com/Mali/">
-    <meta property="og:image" content="https://p4bz.com/mali/assets/01mali.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://p4bz.com/utec/">
+    <meta property="og:image" content="https://p4bz.com/utec/assets/01utec.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
     <meta property="og:site_name" content="PABZ">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mali × Infinito — Branding &amp; Visual Identity by PABZ">
-    <meta name="twitter:description" content="Branding and visual identity for Mali × Infinito by Pablo Ibañez, Senior Brand Designer.">
-    <meta name="twitter:image" content="https://p4bz.com/mali/assets/01mali.jpg">
+    <meta name="twitter:title" content="UTEC — Brand Identity &amp; Art Direction by PABZ">
+    <meta name="twitter:description" content="Brand identity and art direction for UTEC by Pablo Ibañez, Senior Brand Designer.">
+    <meta name="twitter:image" content="https://p4bz.com/utec/assets/01utec.jpg">
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
     <style>
         @font-face {
@@ -125,6 +125,21 @@
             border-radius: 12px;
             transition: opacity 0.25s ease, transform 0.3s ease;
         }
+        .hero-video-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 640 / 360;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: opacity 0.25s ease, transform 0.3s ease;
+        }
+        .hero-video-wrapper iframe,
+        .hero-video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
 
         .info-box {
             padding: 24px;
@@ -205,64 +220,36 @@
             margin-bottom: 16px;
             padding: 0 23px;
         }
-        .visual-break img, .visual-break video {
+        .visual-break > img, .visual-break > video {
             width: 100%;
             height: calc(80vh + 40px);
             object-fit: cover;
             display: block;
-        }
-
-        .visual-sq {
-            width: 100%;
-            margin-bottom: 16px;
-            padding: 0 23px;
-        }
-        .visual-sq .sq {
-            width: 100%;
-            height: min(70vh, 40vw);
-            display: flex;
-            gap: 16px;
             border-radius: 12px;
-            overflow: hidden;
-        }
-        .visual-sq .sq-left, .visual-sq .sq-right {
-            height: 100%;
-            aspect-ratio: 268.24 / 300;
-            flex-shrink: 0;
-            background: #eaeaea;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        .visual-sq .sq-left img, .visual-sq .sq-right img {
-            width: 100%;
-            height: 100%;
-            display: block;
-            border-radius: 0 !important;
-            object-fit: fill;
-        }
-        .visual-sq .sq-mid {
-            flex: 1;
-            min-width: 0;
-            display: flex;
-            gap: 16px;
-            overflow: hidden;
-        }
-        .visual-sq .sq-mid .img-wrap {
-            flex: 1;
-            min-width: 0;
-            overflow: hidden;
-            border-radius: 12px;
-        }
-        .visual-sq .sq-mid .img-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
         }
         .project-page section img, .project-page section video {
             border-radius: 12px;
             transition: opacity 0.25s ease, transform 0.3s ease;
         }
+
+        /* Guide numbers (temporary ordering reference) */
+        .guide-num {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            z-index: 50;
+            font-family: 'Switzer', sans-serif;
+            font-weight: 900;
+            font-size: 14px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.75);
+            border-radius: 6px;
+            padding: 4px 9px;
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+        }
+        .hero-video-wrapper, .img-col { position: relative; }
 
         .gallery {
             display: grid;
@@ -271,108 +258,42 @@
             margin-bottom: 16px;
             padding: 0 23px;
         }
-        .gallery-item { display: block; width: 100%; }
+        .gallery-item { display: block; width: 100%; position: relative; }
         .gallery-item img, .gallery-item video { width: 100%; display: block; object-fit: cover; }
         .gallery-item.span-full { grid-column: 1 / -1; }
-        .gallery-item.slideshow { position: relative; height: min(90vh, 60vw); }
-        .gallery-item.slideshow .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; }
-        .gallery-item.slideshow .slide.active { opacity: 1; }
         .gallery-item.tall img, .gallery-item.tall video { height: 80vh; }
         .gallery-item.wide img, .gallery-item.wide video { height: 55vh; }
         .gallery-item.square img, .gallery-item.square video { height: 50vh; }
         .gallery-item:first-child img, .gallery-item:first-child video { height: calc(80vh + 40px); }
-        .gallery-item:first-child { height: min(70vh, 40vw); }
         .gallery-item:nth-child(2) img, .gallery-item:nth-child(2) video { height: calc(80vh + 120px); }
-        .gallery-item:nth-child(2) { height: min(70vh, 40vw); }
         .gallery-item:nth-child(5) img, .gallery-item:nth-child(5) video { height: calc(80vh + 120px); }
+        .gallery-item:nth-child(5) video { height: auto; object-fit: contain; background: #000; border-radius: 12px; }
         .gallery-item:nth-child(6) img, .gallery-item:nth-child(6) video { height: calc(80vh + 40px); }
 
-        .outro { width: 100%; padding: 0 23px; margin-bottom: 16px; }
-        .outro img, .outro video { width: 100%; height: auto; display: block; border-radius: 12px; }
-        .hero-video-wrapper {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 640 / 360;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        .hero-video-wrapper iframe,
-        .hero-video-wrapper video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            pointer-events: none;
-        }
+        .outro { width: 100%; padding: 0 23px; margin-bottom: 16px; position: relative; }
+        .outro > img, .outro > video { width: 100%; height: calc(75vh + 20px); object-fit: cover; display: block; }
 
         @media (max-width: 768px) {
             .project-page { padding: 30px 0 80px; }
             .hero, .intro-grid, .credits-grid, .visual-break, .gallery, .outro { margin-bottom: 16px; }
-            .hero img, .hero video { height: calc(50vh + 40px); }
+             .hero-video-wrapper { aspect-ratio: 640 / 360; }
             .hero { padding-top: 30px; }
             .intro-grid { grid-template-columns: 1fr; gap: 16px; }
             .intro-grid .img-col { grid-column: 1; }
             .intro-grid .img-col img { height: 50vh; }
             .credits-grid { grid-template-columns: 1fr; }
             .credits-grid .credits-items { grid-template-columns: 1fr; }
-            .visual-sq .sq { height: min(50vh, 60vw); }
-            .visual-break img, .visual-break video { height: calc(50vh + 40px); }
+            .visual-break > img, .visual-break > video { height: calc(50vh + 40px); }
             .gallery { grid-template-columns: 1fr; gap: 12px; }
             .gallery-item.tall img, .gallery-item.tall video,
             .gallery-item.wide img, .gallery-item.wide video,
             .gallery-item.square img, .gallery-item.square video { height: 40vh; }
             .gallery-item:first-child img, .gallery-item:first-child video { height: calc(50vh + 40px); }
-            .gallery-item:first-child { height: min(50vh, 60vw); }
-            .gallery-item.span-full.wide { display: none !important; }
-            .gallery-mobile-slideshow {
-                display: flex !important;
-                position: relative;
-                width: 100%;
-                aspect-ratio: 268.24 / 300;
-                border-radius: 12px;
-                overflow: hidden;
-                background: #eaeaea;
-            }
-            .gallery-item.slideshow { height: min(70vh, 80vw); }
-            .desktop-only { display: none !important; }
-            .mobile-only { display: block !important; width: 100% !important; height: auto !important; }
-            .gallery-item[style*="004e37"] { height: auto !important; aspect-ratio: 881.32 / 786.78; }
-            .gallery-item[style*="004e37"] .mobile-only { position: static !important; transform: none !important; }
-            section[style*="padding"] > div:first-child { height: auto !important; aspect-ratio: 881.32 / 786.78; padding: 0; }
-            .visual-sq .sq { display: none !important; }
-            .visual-sq .mobile-slideshow {
-                display: flex !important;
-                position: relative;
-                width: 100%;
-                aspect-ratio: 268.24 / 300;
-                border-radius: 12px;
-                overflow: hidden;
-                background: #eaeaea;
-            }
-            .mobile-slideshow .ms-slide {
-                position: absolute;
-                top: 0; left: 0;
-                width: 100%; height: 100%;
-                opacity: 0;
-                animation: msSnap 6s step-end infinite;
-            }
-            .mobile-slideshow .ms-slide:first-child { animation-delay: 0s; }
-            .mobile-slideshow .ms-slide:nth-child(2) { animation-delay: 3s; }
-            .mobile-slideshow .ms-slide img {
-                width: 100%; height: 100%;
-                object-fit: cover;
-                display: block;
-            }
-            @keyframes msSnap {
-                0%, 45% { opacity: 1; }
-                50%, 95% { opacity: 0; }
-                100% { opacity: 1; }
-            }
             .gallery-item:nth-child(2) img, .gallery-item:nth-child(2) video { height: calc(50vh + 120px); }
-            .gallery-item:nth-child(2) { height: min(50vh, 60vw); }
-            .gallery-item:nth-child(5) img, .gallery-item:nth-child(5) video { height: calc(50vh + 120px); }
+            .gallery-item:nth-child(5) img { height: calc(50vh + 120px); }
+            .gallery-item:nth-child(5) video { height: auto; object-fit: contain; background: #000; border-radius: 12px; }
             .gallery-item:nth-child(6) img, .gallery-item:nth-child(6) video { height: calc(50vh + 40px); }
-            .outro img, .outro video { height: auto; }
-            .hero-video-wrapper { height: auto; aspect-ratio: 640 / 360; }
+            .outro > img, .outro > video { height: calc(45vh + 20px); }
             .desktop-text { display: none !important; }
             .mobile-text { display: inline !important; }
             #workButton { display: none !important; }
@@ -449,91 +370,66 @@
 
     <main class="project-page">
 
-        <section class="hero" style="position:relative;">
-            <img src="assets/01mali.jpg" alt="Mali intro" loading="lazy" decoding="async">
-                    </section>
+        <section class="hero">
+            <img src="assets/01utec.jpg" alt="UTEC hero" loading="lazy" decoding="async">
+        </section>
 
         <section class="intro-grid">
             <div class="info-box">
                 <strong>The Challenge</strong>
-                The MALI (Museum of Art of Lima) invited members of ADÑ, Peru's Design Association, to create exclusive merchandise inspired by The Incas: Beyond an Empire, a landmark exhibition four years in the making. The challenge was to transform one of Peru's richest cultural legacies into a contemporary product people would genuinely want to wear.
+                UTEC is one of Peru's leading universities in science, technology and engineering. Its visual identity needed to match the ambition of its programs and adapt seamlessly across every touchpoint, from the campus and academic materials to digital and global audiences.
             </div>
             <div class="info-box">
                 <strong>The Solution</strong>
-                After exploring multiple concepts, we chose an unexpected direction: a set of three unisex socks. Drawing from Inca textiles, architecture, and symbolic patterns, we reinterpreted these elements through bold graphics and modern color palettes, creating everyday objects that connect heritage with contemporary design.
+                A flexible visual system built on the logic of engineering: a precise grid, a distinctive color palette and a typographic approach that flexes across faculties, campaigns and formats. Motion and interactive media bring the brand to life online, reinforcing innovation, research and precision.
             </div>
-            <div class="img-col" style="position:relative;">
-                <img src="assets/02mali.jpg" alt="Mali 2" loading="lazy" decoding="async">
-                            </div>
+            <div class="img-col">
+                <img src="assets/07utec.png" alt="UTEC intro" loading="lazy" decoding="async">
+            </div>
         </section>
 
-        <section style="padding:0 23px;margin-bottom:16px;">
-            <div style="background:#d8d8d8;border-radius:12px;position:relative;width:100%;height:calc(80vh + 40px);overflow:hidden;">
-                <img class="desktop-only" src="assets/MALI_VISUAL_1.1.svg" alt="" loading="lazy" decoding="async" style="position:absolute;top:40px;left:40px;width:400px;height:auto;display:block;border-radius:0;">
-                <img class="desktop-only" src="assets/MALI_VISUAL_1.2.svg" alt="" loading="lazy" decoding="async" style="position:absolute;bottom:40px;right:40px;width:480px;height:auto;display:block;border-radius:0;">
-                <img class="mobile-only" src="assets/MALI_VISUAL_1_MOBILE.svg" alt="" loading="lazy" decoding="async" style="display:none;width:100%;height:100%;object-fit:contain;">
-                            </div>
-        </section>
-
-        <section class="visual-sq" style="position:relative;">
-                        <div class="sq">
-                <div class="sq-left">
-                    <img src="assets/MALI_DISENO_01.svg" alt="" loading="lazy" decoding="async">
-                </div>
-                <div class="sq-mid">
-                    <div class="img-wrap">
-                        <img src="assets/03mali.jpg" alt="Mali 3" loading="lazy" decoding="async">
-                    </div>
-                </div>
-            </div>
-            <div class="mobile-slideshow" style="display:none;">
-                <div class="ms-slide"><img src="assets/MALI_DISENO_01.svg" alt="" loading="lazy" decoding="async"></div>
-                <div class="ms-slide"><img src="assets/03mali.jpg" alt="Mali 3" loading="lazy" decoding="async"></div>
+        <section class="visual-break">
+            <div class="hero-video-wrapper">
+                <video autoplay muted loop playsinline preload="auto" style="width:100%;height:auto;">
+                    <source src="https://res.cloudinary.com/yaj8nng4/video/upload/utec_06.mp4" type="video/mp4">
+                </video>
             </div>
         </section>
 
         <section class="gallery">
-            <div class="gallery-item span-full wide" style="display:flex;gap:16px;position:relative;">
-                                <div style="flex:1;min-width:0;overflow:hidden;border-radius:12px;">
-                    <img src="assets/04mali.jpg" alt="Mali 4" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;">
-                </div>
-                <div style="flex-shrink:0;height:100%;aspect-ratio:268.24/300;background:#eaeaea;border-radius:12px;overflow:hidden;">
-                    <img src="assets/MALI_DISENO_02.svg" alt="" loading="lazy" decoding="async" style="width:100%;height:100%;display:block;border-radius:0;object-fit:fill;">
-                </div>
+            <div class="gallery-item span-full wide">
+                <img src="assets/02utec.jpg" alt="UTEC 1" loading="lazy" decoding="async">
             </div>
-            <div class="mobile-slideshow gallery-mobile-slideshow" style="display:none;">
-                <div class="ms-slide"><img src="assets/04mali.jpg" alt="Mali 4" loading="lazy" decoding="async"></div>
-                <div class="ms-slide"><img src="assets/MALI_DISENO_02.svg" alt="" loading="lazy" decoding="async"></div>
+            <div class="gallery-item span-full wide">
+                <img src="assets/05utec.jpg" alt="UTEC 2" loading="lazy" decoding="async">
             </div>
-            <div class="gallery-item span-full wide" style="display:flex;gap:16px;position:relative;">
-                                <div style="flex-shrink:0;height:100%;aspect-ratio:268.24/300;background:#eaeaea;border-radius:12px;overflow:hidden;">
-                    <img src="assets/MALI_DISENO_03.svg" alt="" loading="lazy" decoding="async" style="width:100%;height:100%;display:block;border-radius:0;object-fit:fill;">
-                </div>
-                <div style="flex:1;min-width:0;overflow:hidden;border-radius:12px;">
-                    <img src="assets/05mali.jpg" alt="Mali 5" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;">
+            <div class="gallery-item square">
+                <img src="assets/08utec.png" alt="UTEC 3" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-item span-full wide">
+                <div class="hero-video-wrapper">
+                    <video autoplay muted loop playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;">
+                        <source src="https://res.cloudinary.com/yaj8nng4/video/upload/utec_11.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
-            <div class="mobile-slideshow gallery-mobile-slideshow" style="display:none;">
-                <div class="ms-slide"><img src="assets/MALI_DISENO_03.svg" alt="" loading="lazy" decoding="async"></div>
-                <div class="ms-slide"><img src="assets/05mali.jpg" alt="Mali 5" loading="lazy" decoding="async"></div>
-            </div>
-            <div class="gallery-item span-full" style="background:#004e37;border-radius:12px;position:relative;height:calc(80vh + 40px);overflow:hidden;">
-                                <img class="desktop-only" src="assets/MALI_VISUAL_2.1.svg" alt="" loading="lazy" decoding="async" style="position:absolute;top:40px;left:40px;width:520px;height:auto;display:block;border-radius:0;">
-                <img class="desktop-only" src="assets/MALI_VISUAL_2.3.svg" alt="" loading="lazy" decoding="async" style="position:absolute;top:5%;left:35%;transform:translate(-50%,-50%);width:500px;height:auto;display:block;border-radius:0;">
-                <img class="desktop-only" src="assets/MALI_VISUAL_2.2.svg" alt="" loading="lazy" decoding="async" style="position:absolute;bottom:40px;right:40px;width:220px;height:auto;display:block;border-radius:0;">
-                <img class="mobile-only" src="assets/MALI_VISUAL_2_MOBILE.svg" alt="" loading="lazy" decoding="async" style="display:none;width:100%;height:100%;object-fit:contain;">
-            </div>
-            <div class="gallery-item span-full slideshow" id="maliSlideshow" style="position:relative;">
-                                <img src="assets/06mali.jpg" alt="Mali 6" class="slide active">
-                <img src="assets/07mali.jpg" alt="Mali 7" class="slide">
-                <img src="assets/08mali.jpg" alt="Mali 8" class="slide">
+            <div class="gallery-item span-full wide">
+                <img src="assets/10utec.png" alt="UTEC 5" loading="lazy" decoding="async">
             </div>
         </section>
 
-        <section class="outro" style="position:relative;">
+        <section class="outro">
             <div class="hero-video-wrapper">
                 <video autoplay muted loop playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;">
-                    <source src="https://res.cloudinary.com/yaj8nng4/video/upload/09_MALI_brvsd9.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/yaj8nng4/video/upload/utec_09.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <section class="visual-break">
+            <div class="hero-video-wrapper">
+                <video autoplay muted loop playsinline preload="auto" style="width:100%;height:auto;">
+                    <source src="https://res.cloudinary.com/yaj8nng4/video/upload/03utec_muceg4.mp4" type="video/mp4">
                 </video>
             </div>
         </section>
@@ -541,38 +437,39 @@
         <section class="credits-grid">
             <div class="info-box">
                 <strong>Detailed Overview</strong>
-                The Incas: Beyond an Empire was one of the MALI's most ambitious exhibitions, bringing together years of research to present a new perspective on the Inca civilization. To accompany the exhibition, the museum invited members of ADÑ to design exclusive merchandise that would be sold throughout the exhibition's run.<br><br>
-                Rather than approaching the brief through conventional souvenirs, we looked for a product that could naturally become part of everyday life. After exploring a wide range of possibilities, we landed on a collection of three unisex socks, an unexpected format that allowed cultural references to become wearable design.<br><br>
-                Each pair draws inspiration from the visual language of the Inca world, from geometric textile patterns to architectural forms and symbolic motifs, translating them into contemporary compositions through vibrant color and clean graphic execution. The collection creates a dialogue between past and present, celebrating one of Peru's greatest cultural legacies through an object designed not for display, but for everyday use.
+                UTEC is a university where science, technology and creativity meet. For its brand to feel as rigorous as its research and as bold as its students, the identity had to be more than a logo: it had to be a system that could live in motion, adapt to every format and grow with the institution.<br><br>
+                This project focused on building that system, structuring the identity around clear principles of grid, color and typography so every piece feels like part of one coherent whole. The result works across printed materials, digital platforms and on-campus applications while staying flexible enough for each faculty and campaign.<br><br>
+                Motion plays a central role, giving the brand energy and making complex ideas feel simple and expressive. Combined with careful art direction, the identity reflects a university that looks to the future, built on precision, curiosity and impact.<br><br>
+                Edit this description with the real story of the project.
             </div>
             <div class="info-box credits-items">
                 <div>
                     <div class="meta-label">Credits</div>
-                    <div class="meta-value">Infinito</div>
+                    <div class="meta-value">—</div>
                 </div>
                 <div>
                     <div class="meta-label">Client</div>
-                    <div class="meta-value">MALI</div>
+                    <div class="meta-value">UTEC</div>
                 </div>
                 <div>
                     <div class="meta-label">Art Direction</div>
-                    <div class="meta-value">Tadashi Matayoshi</div>
+                    <div class="meta-value">Pablo Ibáñez</div>
                 </div>
                 <div>
                     <div class="meta-label">Services</div>
-                    <div class="meta-value">Product Design</div>
+                    <div class="meta-value">Visual Identity<br>Art Direction<br>Motion Design</div>
                 </div>
                 <div>
                     <div class="meta-label">Design</div>
-                    <div class="meta-value">Pablo Ibáñez<br>Angela Alberca</div>
+                    <div class="meta-value">Pablo Ibáñez</div>
                 </div>
                 <div>
                     <div class="meta-label">Year</div>
-                    <div class="meta-value">2022</div>
+                    <div class="meta-value">2025</div>
                 </div>
-                <div style="grid-column:2;">
-                    <div class="meta-label">Awards</div>
-                    <div class="meta-value"><a href="https://www.instagram.com/latinamericandesign/" target="_blank" rel="noopener noreferrer"><img src="../assets/LAD_BRONZE.svg" alt="LAD Bronze" style="width:60px;height:auto;display:block;margin-top:4px;border-radius:0;"></a></div>
+                <div>
+                    <div class="meta-label">Animation</div>
+                    <div class="meta-value">—</div>
                 </div>
             </div>
         </section>
@@ -731,20 +628,14 @@
             });
         }
 
-    </script>
-    <script>
-    (function() {
-        var slideshow = document.getElementById('maliSlideshow');
-        if (!slideshow) return;
-        var slides = slideshow.querySelectorAll('.slide');
-        if (slides.length < 2) return;
-        var current = 0;
-        setInterval(function() {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
-        }, 3000);
-    })();
+        // Guide numbers: label every media element in page order
+        document.querySelectorAll('.project-page section img, .project-page section video').forEach((el, i) => {
+            const n = document.createElement('span');
+            n.className = 'guide-num';
+            n.textContent = String(i + 1).padStart(2, '0');
+            el.parentNode.appendChild(n);
+        });
+
     </script>
 </body>
 </html>

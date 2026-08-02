@@ -22,12 +22,10 @@
     <meta name="twitter:description" content="Branding, packaging and design projects by Pablo Ibañez, Senior Brand Designer.">
     <meta name="twitter:image" content="https://p4bz.com/assets/PABZ_LETTERING_1.svg">
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <style>
         @font-face {
-            font-family: 'Inter';
-            src: url('../assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+            font-family: 'Switzer';
+            src: url('../assets/fonts/Switzer-Variable.woff2') format('woff2');
             font-weight: 100 900;
             font-style: normal;
             font-display: swap;
@@ -40,7 +38,7 @@
         ::view-transition-old(top-nav),
         ::view-transition-new(top-nav) { animation-duration: 0s; }
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Switzer', sans-serif;
     background: #e5e5e5;
     color: #000;
     min-height: 100vh;
@@ -53,8 +51,8 @@ body {
         /* Navigation buttons — exact same as home */
         .nav-button {
             position: fixed;
-            font-family: 'Satoshi', sans-serif;
-            font-weight: 500;
+            font-family: 'Switzer', sans-serif;
+            font-weight: 900;
             font-size: 16px;
             color: #ffffff;
             background: transparent;
@@ -66,31 +64,16 @@ body {
             padding: 8px 12px 4px;
             user-select: none;
             line-height: 1;
-            background-image: linear-gradient(currentColor, currentColor);
-            background-repeat: no-repeat;
-            background-position: 12px bottom;
-            background-origin: padding-box;
-            background-clip: padding-box;
-            background-size: 0px 1px;
-            transition: background-size 0.3s ease;
             mix-blend-mode: difference;
         }
-        .nav-button:hover { background-size: calc(100% - 24px) 1px; }
 
         .social-btn {
-            background: transparent; border: none; font-family: 'Satoshi', sans-serif;
-            font-weight: 500; font-size: 16px; color: inherit; cursor: pointer;
+            background: transparent; border: none; font-family: 'Switzer', sans-serif;
+            font-weight: 900; font-size: 16px; color: inherit; cursor: pointer;
             padding: 8px 12px 4px 3px; margin: 0; letter-spacing: 1px;
             display: inline-block; line-height: 1;
-            background-image: linear-gradient(currentColor, currentColor);
-            background-repeat: no-repeat;
-            background-position: 3px bottom;
-            background-origin: padding-box;
-            background-clip: padding-box;
-            background-size: 0px 1px;
-            transition: background-size 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
-        .social-btn:hover { background-size: calc(100% - 15px) 1px; }
         .hola-mobile { display: none; }
         @media (min-width: 769px) {
             .mobile-lets-talk { display: none !important; }
@@ -115,8 +98,8 @@ body {
             pointer-events: auto;
         }
         .filter-btn {
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
+            font-family: 'Switzer', sans-serif;
+            font-weight: 900;
             font-size: 16px;
             color: inherit;
             background: transparent;
@@ -125,17 +108,10 @@ body {
             padding: 4px 0;
             letter-spacing: 1px;
             line-height: 1;
-            background-image: linear-gradient(currentColor, currentColor);
-            background-repeat: no-repeat;
-            background-position: 0 bottom;
-            background-origin: padding-box;
-            background-clip: padding-box;
-            background-size: 0px 1px;
-            transition: background-size 0.3s ease, opacity 0.3s ease;
+            transition: opacity 0.3s ease;
             opacity: 0.3;
         }
-        .filter-btn:hover { background-size: 100% 1px; }
-        .filter-btn.active { opacity: 1; background-size: 100% 1px; }
+        .filter-btn.active { opacity: 1; }
 
         .bottom-right-container {
             bottom: 20px;
@@ -213,11 +189,9 @@ body {
         .hola-button {
             text-align: right;
             display: inline-block;
-            background-position: right 3px bottom;
             padding-right: 3px;
         }
-        .hola-button:hover { background-size: calc(100% - 15px) 1px; }
-        .hola-button.active-socials { padding: 0; background-size: 0px 1px !important; }
+        .hola-button.active-socials { padding: 0; }
         .hola-socials { display: none; }
         .hola-button.active-socials .hola-text { display: none; }
         .hola-button.active-socials .hola-socials { display: inline; }
@@ -227,9 +201,7 @@ body {
             text-align: left;
             display: inline-block;
             padding-left: 3px;
-            background-position: 3px bottom;
         }
-        .redes-button:hover { background-size: calc(100% - 15px) 1px; }
 
         .work-button {
             width: auto;
@@ -249,7 +221,7 @@ body {
             right: 20px;
             transform: translateY(-50%);
             z-index: 5000;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Switzer', sans-serif;
             font-weight: 400;
             font-size: 16px;
             background: transparent;
@@ -356,7 +328,7 @@ body {
             pointer-events: none;
         }
         .card-title {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Switzer', sans-serif;
             font-size: 12px;
             font-weight: 500;
             letter-spacing: 0.04em;
@@ -484,7 +456,7 @@ body {
                 pointer-events: auto;
             }
             .filter-btn {
-                font-family: 'Inter', sans-serif;
+                font-family: 'Switzer', sans-serif;
                 font-weight: 400;
                 font-size: 16px;
                 color: inherit;
@@ -501,8 +473,8 @@ body {
             .filter-btn.active { opacity: 1; background: none; }
             .filter-btn:hover { background: none; }
             .mobile-social-btn {
-                font-family: 'Satoshi', sans-serif;
-                font-weight: 500;
+                font-family: 'Switzer', sans-serif;
+                font-weight: 900;
                 font-size: 16px;
                 color: inherit;
                 background: transparent;
@@ -513,7 +485,6 @@ body {
                 line-height: 1;
                 display: inline-block;
             }
-            .mobile-social-btn:hover { background-size: calc(100% - 11px) 1px; }
              .mobile-lets-talk {
                 display: none !important;
             }
