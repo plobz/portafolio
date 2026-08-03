@@ -55,7 +55,7 @@
         .nav-button {
             position: fixed;
             font-family: 'Switzer', sans-serif;
-            font-weight: 900;
+            font-weight: 300;
             font-size: 16px;
             color: #ff2703;
             background: transparent;
@@ -97,7 +97,7 @@
 
         .social-btn {
             background: transparent; border: none; font-family: 'Switzer', sans-serif;
-            font-weight: 900; font-size: 16px; color: inherit; cursor: pointer;
+            font-weight: 300; font-size: 16px; color: inherit; cursor: pointer;
             padding: 8px 12px 4px 3px; margin: 0; letter-spacing: 1px;
             display: inline-block; line-height: 1;
             transition: opacity 0.6s ease, transform 0.6s ease;
@@ -122,14 +122,14 @@
             height: calc(80vh + 40px);
             object-fit: cover;
             display: block;
-            border-radius: 12px;
+            border-radius: 6px;
             transition: opacity 0.25s ease, transform 0.3s ease;
         }
         .hero-video-wrapper {
             position: relative;
             width: 100%;
             aspect-ratio: 640 / 360;
-            border-radius: 12px;
+            border-radius: 6px;
             overflow: hidden;
             transition: opacity 0.25s ease, transform 0.3s ease;
         }
@@ -182,7 +182,7 @@
             max-height: 700px;
             object-fit: cover;
             display: block;
-            border-radius: 12px;
+            border-radius: 6px;
         }
 
         .credits-grid {
@@ -225,10 +225,10 @@
             height: calc(80vh + 40px);
             object-fit: cover;
             display: block;
-            border-radius: 12px;
+            border-radius: 6px;
         }
         .project-page section img, .project-page section video {
-            border-radius: 12px;
+            border-radius: 6px;
             transition: opacity 0.25s ease, transform 0.3s ease;
         }
 
@@ -248,7 +248,7 @@
         .gallery-item:first-child img, .gallery-item:first-child video { height: calc(80vh + 40px); }
         .gallery-item:nth-child(2) img, .gallery-item:nth-child(2) video { height: calc(80vh + 120px); }
         .gallery-item:nth-child(5) img, .gallery-item:nth-child(5) video { height: calc(80vh + 120px); }
-        .gallery-item:nth-child(5) video { height: auto; object-fit: contain; background: #000; border-radius: 12px; }
+        .gallery-item:nth-child(5) video { height: auto; object-fit: contain; background: #000; border-radius: 6px; }
         .gallery-item:nth-child(6) img, .gallery-item:nth-child(6) video { height: calc(80vh + 40px); }
 
         .outro { width: 100%; padding: 0 23px; margin-bottom: 16px; position: relative; }
@@ -272,7 +272,7 @@
             .gallery-item:first-child img, .gallery-item:first-child video { height: calc(50vh + 40px); }
             .gallery-item:nth-child(2) img, .gallery-item:nth-child(2) video { height: calc(50vh + 120px); }
             .gallery-item:nth-child(5) img { height: calc(50vh + 120px); }
-            .gallery-item:nth-child(5) video { height: auto; object-fit: contain; background: #000; border-radius: 12px; }
+            .gallery-item:nth-child(5) video { height: auto; object-fit: contain; background: #000; border-radius: 6px; }
             .gallery-item:nth-child(6) img, .gallery-item:nth-child(6) video { height: calc(50vh + 40px); }
             .outro > img, .outro > video { height: calc(45vh + 20px); }
             .desktop-text { display: none !important; }
@@ -592,14 +592,14 @@
             if (tag === 'img') {
                 const img = document.createElement('img');
                 img.src = el.src;
-                img.style.cssText = 'max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;display:block;';
+                img.style.cssText = 'max-width:100%;max-height:100%;object-fit:contain;border-radius:4px;display:block;';
                 lbContent.appendChild(img);
             } else if (tag === 'video') {
                 const vid = document.createElement('video');
                 vid.src = el.querySelector('source') ? el.querySelector('source').src : el.src;
                 vid.controls = true;
                 vid.autoplay = true;
-                vid.style.cssText = 'max-width:100%;max-height:100%;border-radius:8px;display:block;';
+                vid.style.cssText = 'max-width:100%;max-height:100%;border-radius:4px;display:block;';
                 lbContent.appendChild(vid);
             }
             lightbox.style.display = 'flex';

@@ -55,7 +55,7 @@
         .nav-button {
             position: fixed;
             font-family: 'Switzer', sans-serif;
-            font-weight: 900;
+            font-weight: 300;
             font-size: 16px;
             color: #ff2703;
             background: transparent;
@@ -97,7 +97,7 @@
 
         .social-btn {
             background: transparent; border: none; font-family: 'Switzer', sans-serif;
-            font-weight: 900; font-size: 16px; color: inherit; cursor: pointer;
+            font-weight: 300; font-size: 16px; color: inherit; cursor: pointer;
             padding: 8px 12px 4px 3px; margin: 0; letter-spacing: 1px;
             display: inline-block; line-height: 1;
             transition: opacity 0.6s ease, transform 0.6s ease;
@@ -122,14 +122,14 @@
             height: calc(80vh + 40px);
             object-fit: cover;
             display: block;
-            border-radius: 12px;
+            border-radius: 6px;
             transition: opacity 0.25s ease, transform 0.3s ease;
         }
         .hero-video-wrapper {
             position: relative;
             width: 100%;
             aspect-ratio: 640 / 360;
-            border-radius: 12px;
+            border-radius: 6px;
             overflow: hidden;
             transition: opacity 0.25s ease, transform 0.3s ease;
         }
@@ -182,7 +182,7 @@
             max-height: 700px;
             object-fit: cover;
             display: block;
-            border-radius: 12px;
+            border-radius: 6px;
         }
 
         .credits-grid {
@@ -225,10 +225,10 @@
             height: calc(80vh + 40px);
             object-fit: cover;
             display: block;
-            border-radius: 12px;
+            border-radius: 6px;
         }
         .project-page section img, .project-page section video {
-            border-radius: 12px;
+            border-radius: 6px;
             transition: opacity 0.25s ease, transform 0.3s ease;
         }
 
@@ -267,17 +267,32 @@
         .gallery-item:first-child img, .gallery-item:first-child video { height: calc(80vh + 40px); }
         .gallery-item:nth-child(2) img, .gallery-item:nth-child(2) video { height: calc(80vh + 120px); }
         .gallery-item:nth-child(5) img, .gallery-item:nth-child(5) video { height: calc(80vh + 120px); }
-        .gallery-item:nth-child(5) video { height: auto; object-fit: contain; background: #000; border-radius: 12px; }
+        .gallery-item:nth-child(5) video { height: auto; object-fit: contain; background: #000; border-radius: 6px; }
         .gallery-item:nth-child(6) img, .gallery-item:nth-child(6) video { height: calc(80vh + 40px); }
+        .gallery-item.duo img, .gallery-item.duo video { height: 50vh; }
 
         .outro { width: 100%; padding: 0 23px; margin-bottom: 16px; position: relative; }
         .outro > img, .outro > video { width: 100%; height: calc(75vh + 20px); object-fit: cover; display: block; }
 
+        .duo-videos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 16px;
+            padding: 0 23px;
+        }
+        .duo-videos .hero-video-wrapper { background: #000; }
+        .duo-videos .hero-video-wrapper video { object-fit: contain; }
+        .duo-videos .hero-video-wrapper:nth-child(2) video { transform: scale(1.2); }
+
         @media (max-width: 768px) {
             .project-page { padding: 30px 0 80px; }
             .hero, .intro-grid, .credits-grid, .visual-break, .gallery, .outro { margin-bottom: 16px; }
+            .duo-videos { grid-template-columns: 1fr; gap: 12px; }
+            .duo-videos .hero-video-wrapper:nth-child(2) video { transform: none; }
              .hero-video-wrapper { aspect-ratio: 640 / 360; }
             .hero { padding-top: 30px; }
+            .hero img { aspect-ratio: 1 / 1; height: auto; }
             .intro-grid { grid-template-columns: 1fr; gap: 16px; }
             .intro-grid .img-col { grid-column: 1; }
             .intro-grid .img-col img { height: 50vh; }
@@ -291,8 +306,9 @@
             .gallery-item:first-child img, .gallery-item:first-child video { height: calc(50vh + 40px); }
             .gallery-item:nth-child(2) img, .gallery-item:nth-child(2) video { height: calc(50vh + 120px); }
             .gallery-item:nth-child(5) img { height: calc(50vh + 120px); }
-            .gallery-item:nth-child(5) video { height: auto; object-fit: contain; background: #000; border-radius: 12px; }
+            .gallery-item:nth-child(5) video { height: auto; object-fit: contain; background: #000; border-radius: 6px; }
             .gallery-item:nth-child(6) img, .gallery-item:nth-child(6) video { height: calc(50vh + 40px); }
+            .gallery-item.duo img, .gallery-item.duo video { height: 40vh; }
             .outro > img, .outro > video { height: calc(45vh + 20px); }
             .desktop-text { display: none !important; }
             .mobile-text { display: inline !important; }
@@ -377,59 +393,59 @@
         <section class="intro-grid">
             <div class="info-box">
                 <strong>The Challenge</strong>
-                UTEC is one of Peru's leading universities in science, technology and engineering. Its visual identity needed to match the ambition of its programs and adapt seamlessly across every touchpoint, from the campus and academic materials to digital and global audiences.
+                UTEC Postgrado needed its own identity — one that could stand as a specialized branch of UTEC while carrying the same weight: a program built to transform professionals and organizations through innovation, data, agility, and technology.
             </div>
             <div class="info-box">
                 <strong>The Solution</strong>
-                A flexible visual system built on the logic of engineering: a precise grid, a distinctive color palette and a typographic approach that flexes across faculties, campaigns and formats. Motion and interactive media bring the brand to life online, reinforcing innovation, research and precision.
+                We built a system rooted in those four pillars — innovation, data, agility, technology — giving Postgrado a visual language sharp enough to reflect the caliber of its programs while staying clearly connected to UTEC's core identity.
             </div>
             <div class="img-col">
-                <img src="assets/07utec.png" alt="UTEC intro" loading="lazy" decoding="async">
+                <img id="introSlide" src="assets/12utec.jpg" alt="UTEC intro" loading="lazy" decoding="async">
             </div>
         </section>
 
         <section class="visual-break">
             <div class="hero-video-wrapper">
                 <video autoplay muted loop playsinline preload="auto" style="width:100%;height:auto;">
-                    <source src="https://res.cloudinary.com/yaj8nng4/video/upload/utec_06.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/yaj8nng4/video/upload/q_auto/03utec_muceg4.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <section class="duo-videos">
+            <div class="hero-video-wrapper" style="aspect-ratio: 960 / 1080;">
+                <video autoplay muted loop playsinline preload="auto" style="width:100%;height:100%;object-fit:contain;">
+                    <source src="https://res.cloudinary.com/yaj8nng4/video/upload/q_auto/04utec_kokvym.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-video-wrapper" style="aspect-ratio: 960 / 1080;">
+                <video autoplay muted loop playsinline preload="auto" style="width:100%;height:100%;object-fit:contain;">
+                    <source src="https://res.cloudinary.com/yaj8nng4/video/upload/q_auto/06utec_yqcsj3.mp4" type="video/mp4">
                 </video>
             </div>
         </section>
 
         <section class="gallery">
             <div class="gallery-item span-full wide">
-                <img src="assets/02utec.jpg" alt="UTEC 1" loading="lazy" decoding="async">
+                <img src="assets/07utec.png" alt="UTEC 1" loading="lazy" decoding="async">
+            </div>
+            <div class="gallery-item duo">
+                <img src="assets/08utec.png" alt="UTEC 3" loading="lazy" decoding="async" style="height:auto;object-fit:cover;">
+            </div>
+            <div class="gallery-item duo">
+                <video autoplay muted loop playsinline preload="auto" style="object-fit:contain;background:#000;height:auto;">
+                    <source src="https://res.cloudinary.com/yaj8nng4/video/upload/q_auto/09utec_um8vhb.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="gallery-item span-full wide">
-                <img src="assets/05utec.jpg" alt="UTEC 2" loading="lazy" decoding="async">
-            </div>
-            <div class="gallery-item square">
-                <img src="assets/08utec.png" alt="UTEC 3" loading="lazy" decoding="async">
-            </div>
-            <div class="gallery-item span-full wide">
-                <div class="hero-video-wrapper">
-                    <video autoplay muted loop playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;">
-                        <source src="https://res.cloudinary.com/yaj8nng4/video/upload/utec_11.mp4" type="video/mp4">
-                    </video>
-                </div>
+                <img src="assets/02utec.jpg" alt="UTEC 1" loading="lazy" decoding="async" style="height: calc(80vh + 40px); object-fit: cover;">
             </div>
             <div class="gallery-item span-full wide">
                 <img src="assets/10utec.png" alt="UTEC 5" loading="lazy" decoding="async">
             </div>
-        </section>
-
-        <section class="outro">
-            <div class="hero-video-wrapper">
-                <video autoplay muted loop playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;">
-                    <source src="https://res.cloudinary.com/yaj8nng4/video/upload/utec_09.mp4" type="video/mp4">
-                </video>
-            </div>
-        </section>
-
-        <section class="visual-break">
-            <div class="hero-video-wrapper">
-                <video autoplay muted loop playsinline preload="auto" style="width:100%;height:auto;">
-                    <source src="https://res.cloudinary.com/yaj8nng4/video/upload/03utec_muceg4.mp4" type="video/mp4">
+            <div class="gallery-item span-full wide">
+                <video autoplay muted loop playsinline preload="auto">
+                    <source src="https://res.cloudinary.com/yaj8nng4/video/upload/q_auto/11utec_mgtjm9.mp4" type="video/mp4">
                 </video>
             </div>
         </section>
@@ -437,15 +453,14 @@
         <section class="credits-grid">
             <div class="info-box">
                 <strong>Detailed Overview</strong>
-                UTEC is a university where science, technology and creativity meet. For its brand to feel as rigorous as its research and as bold as its students, the identity had to be more than a logo: it had to be a system that could live in motion, adapt to every format and grow with the institution.<br><br>
-                This project focused on building that system, structuring the identity around clear principles of grid, color and typography so every piece feels like part of one coherent whole. The result works across printed materials, digital platforms and on-campus applications while staying flexible enough for each faculty and campaign.<br><br>
-                Motion plays a central role, giving the brand energy and making complex ideas feel simple and expressive. Combined with careful art direction, the identity reflects a university that looks to the future, built on precision, curiosity and impact.<br><br>
-                Edit this description with the real story of the project.
+                UTEC Postgrado is the professional specialization arm of the Universidad de Ingeniería y Tecnología, built around four core pillars: innovation, data, agility, and technology. Its purpose is to transform professionals and organizations, equipping them to face present and future challenges head-on.<br><br>
+                The challenge was to give this branch an identity of its own — one specialized and distinct enough to speak to a professional, career-driven audience, while still feeling unmistakably part of the UTEC family.<br><br>
+                The result is a system built around those four defining pillars, translated into a visual language that's sharp, credible, and forward-looking — reflecting a program designed not just to teach, but to transform.
             </div>
             <div class="info-box credits-items">
                 <div>
                     <div class="meta-label">Credits</div>
-                    <div class="meta-value">—</div>
+                    <div class="meta-value">Infinito</div>
                 </div>
                 <div>
                     <div class="meta-label">Client</div>
@@ -453,11 +468,11 @@
                 </div>
                 <div>
                     <div class="meta-label">Art Direction</div>
-                    <div class="meta-value">Pablo Ibáñez</div>
+                    <div class="meta-value">Tadashi Matayoshi</div>
                 </div>
                 <div>
                     <div class="meta-label">Services</div>
-                    <div class="meta-value">Visual Identity<br>Art Direction<br>Motion Design</div>
+                    <div class="meta-value">Visual Identity<br>Art Direction</div>
                 </div>
                 <div>
                     <div class="meta-label">Design</div>
@@ -465,11 +480,7 @@
                 </div>
                 <div>
                     <div class="meta-label">Year</div>
-                    <div class="meta-value">2025</div>
-                </div>
-                <div>
-                    <div class="meta-label">Animation</div>
-                    <div class="meta-value">—</div>
+                    <div class="meta-value">2022</div>
                 </div>
             </div>
         </section>
@@ -608,14 +619,14 @@
             if (tag === 'img') {
                 const img = document.createElement('img');
                 img.src = el.src;
-                img.style.cssText = 'max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;display:block;';
+                img.style.cssText = 'max-width:100%;max-height:100%;object-fit:contain;border-radius:4px;display:block;';
                 lbContent.appendChild(img);
             } else if (tag === 'video') {
                 const vid = document.createElement('video');
                 vid.src = el.querySelector('source') ? el.querySelector('source').src : el.src;
                 vid.controls = true;
                 vid.autoplay = true;
-                vid.style.cssText = 'max-width:100%;max-height:100%;border-radius:8px;display:block;';
+                vid.style.cssText = 'max-width:100%;max-height:100%;border-radius:4px;display:block;';
                 lbContent.appendChild(vid);
             }
             lightbox.style.display = 'flex';
@@ -626,6 +637,28 @@
                 el.style.cursor = 'zoom-in';
                 el.addEventListener('click', function() { openLightbox(this); });
             });
+        }
+
+        // Intro slideshow: cycle images without animation (preload next before swap)
+        const introSlides = ['assets/12utec.jpg', 'assets/13utec.jpg', 'assets/14utec.jpg', 'assets/15utec.jpg'];
+        const introImg = document.getElementById('introSlide');
+        if (introImg) {
+            let introIdx = 0;
+            const introCache = introSlides.map(src => { const i = new Image(); i.src = src; return i; });
+            setInterval(() => {
+                const nextIdx = (introIdx + 1) % introSlides.length;
+                const next = introCache[nextIdx];
+                const swap = () => {
+                    introImg.src = introSlides[nextIdx];
+                    introIdx = nextIdx;
+                };
+                if (next.complete && next.naturalWidth > 0) {
+                    swap();
+                } else {
+                    next.onload = swap;
+                    next.onerror = swap;
+                }
+            }, 3000);
         }
 
         // Guide numbers: label every media element in page order
